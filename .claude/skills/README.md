@@ -12,10 +12,16 @@ marketplace, sem passo de instalação.
 | `git-guardrails-claude-code` | automática | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/misc/git-guardrails-claude-code) |
 | `grill-me` | `/grill-me` | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) |
 | `grilling` | automática | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling) |
+| `skill-creator` | automática | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator) |
 | `superpowers` (14 skills) | `superpowers:<skill>` | [obra/superpowers](https://github.com/obra/superpowers) |
 
 `grilling` não foi pedida explicitamente, mas `grill-me` é só um atalho cujo
 corpo é *"Call the Skill tool with 'grilling'"* — sem ela a skill não faz nada.
+
+`skill-creator` provavelmente aparece duas vezes na sua sessão: esta cópia, como
+`skill-creator`, e a da sua conta Claude, como `anthropic-skills:skill-creator`.
+São a mesma skill. A cópia daqui existe para quem clonar o repositório sem ter a
+outra; se incomodar, apague `skill-creator/` e use a da conta.
 
 ## Duas formas de instalação, e por quê
 
@@ -37,6 +43,27 @@ auto-ativa.
 > Plugin de escopo de projeto carrega só depois que você aceita o diálogo de
 > confiança do workspace, e só quando a sessão é aberta na raiz do repositório
 > (não caminha até a raiz a partir de um subdiretório, como as skills soltas fazem).
+
+## `docx` e `xlsx` não estão aqui — de propósito
+
+As skills `docx` e `xlsx` da Anthropic são **proprietárias**. A `LICENSE.txt`
+delas proíbe, com essas palavras, *"retain copies of these materials outside
+the Services"*, *"reproduce or copy these materials"* e *"distribute,
+sublicense, or transfer these materials to any third party"*. Commitar as duas
+neste repositório seria as três coisas ao mesmo tempo.
+
+A `skill-creator`, do mesmo repositório, é **Apache 2.0** — essa pode ficar, e
+ficou.
+
+Isso não te deixa sem elas. Ambas já vêm no ambiente Claude da conta, como
+`anthropic-skills:docx` e `anthropic-skills:xlsx`. Uma skill deste repositório
+pode chamá-las normalmente em tempo de execução — o que ela não pode é carregar
+uma cópia dentro de si.
+
+A consequência prática para uma skill futura: quem clonar este repositório sem
+ter essas skills na conta não vai conseguir gerar `.docx`/`.xlsx` por elas. Se
+isso importar, a saída é a skill trazer seu próprio renderizador em
+`scripts/` — código próprio, sem restrição de licença.
 
 ## `git-guardrails-claude-code` está instalada, mas inativa
 
@@ -60,6 +87,7 @@ Copiado byte a byte destes commits:
 | `vercel-labs/skills` | `d667282815248da03a08a18272b5d2eef9caf77c` | 2026-09-11 | MIT — Vercel, Inc. |
 | `mattpocock/skills` | `3cca18b368ae95cdbdebbff572ccafa662551015` | 2026-09-04 | MIT — Matt Pocock |
 | `obra/superpowers` | `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` (v6.3.0) | 2026-08-12 | MIT — Jesse Vincent |
+| `anthropics/skills` | `34040c9c568585f6929bedeaad110ad08f079624` | 2026-09-10 | Apache 2.0 — Anthropic (só `skill-creator`) |
 
 Os textos das licenças estão em `LICENSES/`, e o do superpowers em
 `superpowers/LICENSE`.
