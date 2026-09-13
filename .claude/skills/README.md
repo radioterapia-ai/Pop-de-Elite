@@ -12,11 +12,18 @@ marketplace, sem passo de instalação.
 | `git-guardrails-claude-code` | automática | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/misc/git-guardrails-claude-code) |
 | `grill-me` | `/grill-me` | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) |
 | `grilling` | automática | [mattpocock/skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling) |
+| `karpathy-guidelines` | automática | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) |
 | `skill-creator` | automática | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator) |
 | `superpowers` (14 skills) | `superpowers:<skill>` | [obra/superpowers](https://github.com/obra/superpowers) |
 
 `grilling` não foi pedida explicitamente, mas `grill-me` é só um atalho cujo
 corpo é *"Call the Skill tool with 'grilling'"* — sem ela a skill não faz nada.
+
+`karpathy-guidelines` e o `superpowers` disputam o mesmo terreno: as duas dizem
+ao Claude *como* programar, e as duas disparam sozinhas. Elas não se contradizem
+— "Simplicity First" e "Surgical Changes" convivem bem com TDD e revisão por
+subagente — mas se em algum momento o comportamento parecer confuso ou
+excessivamente cerimonioso, é aqui que se olha primeiro.
 
 `skill-creator` provavelmente aparece duas vezes na sua sessão: esta cópia, como
 `skill-creator`, e a da sua conta Claude, como `anthropic-skills:skill-creator`.
@@ -88,6 +95,13 @@ Copiado byte a byte destes commits:
 | `mattpocock/skills` | `3cca18b368ae95cdbdebbff572ccafa662551015` | 2026-09-04 | MIT — Matt Pocock |
 | `obra/superpowers` | `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` (v6.3.0) | 2026-08-12 | MIT — Jesse Vincent |
 | `anthropics/skills` | `34040c9c568585f6929bedeaad110ad08f079624` | 2026-09-10 | Apache 2.0 — Anthropic (só `skill-creator`) |
+| `multica-ai/andrej-karpathy-skills` | `2c606141936f1eeef17fa3043a72095b4765b9c2` | 2026-04-20 | MIT — forrestchang (ver nota) |
+
+Nota sobre o `andrej-karpathy-skills`: o repositório **não tem arquivo
+LICENSE**. MIT está declarado em três lugares — `## License` no README,
+`"license": "MIT"` no `plugin.json` e no frontmatter do próprio `SKILL.md` —
+o que deixa a intenção clara, mas sem o texto da licença no repositório de
+origem não há o que copiar para `LICENSES/`.
 
 Os textos das licenças estão em `LICENSES/`, e o do superpowers em
 `superpowers/LICENSE`.
