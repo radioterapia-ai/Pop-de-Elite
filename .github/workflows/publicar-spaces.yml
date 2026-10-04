@@ -77,7 +77,8 @@ jobs:
           owner="${SPACE_V1%%/*}"; name="${SPACE_V1#*/}"
           url="https://$(echo "$owner" | tr 'A-Z_' 'a-z-')-$(echo "$name" | tr 'A-Z_' 'a-z-').hf.space/saude"
           for i in $(seq 1 40); do
-            if curl -fsS -m 10 "$url"; then echo; echo "Engine up: $url"; exit 0; fi
+            # the old app answers any path with its HTML page while the new build starts: wait for the API JSON
+            if curl -fsS -m 10 "$url" | grep -q '"diagramas"'; then echo "Engine up: $url"; exit 0; fi
             sleep 15
           done
           echo "::warning::The engine did not answer within 10 minutes ($url). See the Space logs."
