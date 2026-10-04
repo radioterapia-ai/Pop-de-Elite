@@ -143,6 +143,9 @@ node --test tests/backend.test.mjs           # backend, with a simulated Gemini
 
 ### The engine as an API
 
+The API lives in `motor/api.py`. On radioterapia.ai it runs inside the 1.0 Space (below), next to
+the 1.0 screens; to host only the engine, build the Docker image:
+
 ```bash
 python scripts/montar_space.py               # assembles _montagem/space/
 cd _montagem/space
@@ -164,7 +167,8 @@ types, a management sheet and training decks. They are fictitious.
 
 The 1.0 app is the step-by-step path: you paste the JSON that your own Gemini Gems
 produce and download the files, built by the same engine. It is also where
-radioterapia.ai sends people when the automatic flow fails.
+radioterapia.ai sends people when the automatic flow fails. The same Space serves the engine
+API the site calls (`/saude` and `/renderizar`), so one free Space runs both.
 
 ```bash
 pip install gradio

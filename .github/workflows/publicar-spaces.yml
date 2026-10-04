@@ -1,14 +1,12 @@
-# Tests the engine, its API, the 1.0 app and the backend, then publishes both Hugging Face Spaces
-# from this repository on every update of main:
-#   - the engine (Docker):        Radioterapia-AI/pop-de-elite-motor
-#   - POP de Elite 1.0 (Gradio):  Radioterapia-AI/POP
+# Tests the engine, its API, the 1.0 app and the backend, then publishes the Hugging Face Space
+# Radioterapia-AI/POP from this repository on every update of main. That Space serves both the
+# POP de Elite 1.0 app (Gradio, at /) and the engine API the site calls (/saude, /renderizar).
 # If any test fails, nothing is published.
 #
 # Settings → Secrets and variables → Actions:
 #   secret    HF_TOKEN          Hugging Face token with WRITE access to the organisation
-#   secret    POP_MOTOR_TOKEN   copied into the engine Space's secrets on each publish; without it,
-#                               the engine refuses every /renderizar
-#   variable  HF_SPACE_MOTOR    (optional) default Radioterapia-AI/pop-de-elite-motor
+#   secret    POP_MOTOR_TOKEN   copied into the Space's secrets on each publish; without it, the
+#                               engine API refuses every /renderizar
 #   variable  HF_SPACE_V1       (optional) default Radioterapia-AI/POP
 
 name: Test and publish Spaces
@@ -58,7 +56,6 @@ jobs:
     env:
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
       POP_MOTOR_TOKEN: ${{ secrets.POP_MOTOR_TOKEN }}
-      SPACE_MOTOR: ${{ vars.HF_SPACE_MOTOR || 'Radioterapia-AI/pop-de-elite-motor' }}
       SPACE_V1: ${{ vars.HF_SPACE_V1 || 'Radioterapia-AI/POP' }}
     steps:
       - uses: actions/checkout@v4
@@ -71,16 +68,13 @@ jobs:
       - name: Hugging Face client
         if: env.HF_TOKEN != ''
         run: pip install huggingface_hub
-      - name: Engine (Docker)
-        if: env.HF_TOKEN != ''
-        run: python scripts/montar_space.py --enviar "$SPACE_MOTOR"
-      - name: POP de Elite 1.0 (Gradio)
+      - name: POP de Elite 1.0 and the engine API (Gradio)
         if: env.HF_TOKEN != ''
         run: python scripts/montar_space_v1.py --enviar "$SPACE_V1"
       - name: Engine answering
         if: env.HF_TOKEN != ''
         run: |
-          owner="${SPACE_MOTOR%%/*}"; name="${SPACE_MOTOR#*/}"
+          owner="${SPACE_V1%%/*}"; name="${SPACE_V1#*/}"
           url="https://$(echo "$owner" | tr 'A-Z_' 'a-z-')-$(echo "$name" | tr 'A-Z_' 'a-z-').hf.space/saude"
           for i in $(seq 1 40); do
             if curl -fsS -m 10 "$url"; then echo; echo "Engine up: $url"; exit 0; fi

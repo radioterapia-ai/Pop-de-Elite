@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Monta e publica o app do POP de Elite 1.0 (Space Gradio Radioterapia-AI/POP) sobre o motor 2.0.
+"""Monta e publica o Space Radioterapia-AI/POP: o app do 1.0 (Gradio) e a API do motor que o site chama.
 
     python scripts/montar_space_v1.py                              # cria _montagem/space_v1/
     python scripts/montar_space_v1.py --enviar Radioterapia-AI/POP # publica (HF_TOKEN com escrita)
@@ -45,9 +45,14 @@ def enviar(destino, repo_id):
     if not token:
         raise SystemExit("Defina HF_TOKEN (Hugging Face → Settings → Access Tokens, permissão de escrita).")
     api = HfApi(token=token)
+    if os.environ.get("POP_MOTOR_TOKEN"):
+        api.add_space_secret(repo_id, "POP_MOTOR_TOKEN", os.environ["POP_MOTOR_TOKEN"])
+        print("Segredo POP_MOTOR_TOKEN atualizado no Space.")
+    else:
+        print("Atenção: sem POP_MOTOR_TOKEN, a API do motor recusa o /renderizar até o segredo ser cadastrado no Space.")
     # GUARDA: o Space já existe (é o 1.0 em produção): não cria, não apaga nada além do que enviamos
     api.upload_folder(repo_id=repo_id, repo_type="space", folder_path=str(destino),
-                      commit_message="POP de Elite 1.0 sobre o motor 2.0")
+                      commit_message="POP de Elite 1.0 e a API do motor 2.0")
     print(f"Publicado: https://huggingface.co/spaces/{repo_id}")
 
 

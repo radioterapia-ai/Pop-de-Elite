@@ -2,8 +2,11 @@
 
 As mesmas telas da 1.0 (logo, cores, colar o código das Gemas e baixar), agora montando os
 arquivos com o motor 2.0 (pasta motor/), o mesmo que atende o site. É o caminho passo a passo
-e o fallback do site: quem estoura o teto diário ou pega uma falha do fluxo automático é
-orientado a vir para cá, com as Gemas e a conta Gemini da própria pessoa.
+e o fallback do site: quem pega uma falha do fluxo automático é orientado a vir para cá, com as
+Gemas e a conta Gemini da própria pessoa.
+
+O mesmo processo serve a API do motor que o site chama (GET /saude e POST /renderizar, com o
+X-Pop-Token), de motor/api.py: as telas ficam em /, a API ao lado.
 
 Publicado automaticamente a cada atualização do repositório (.github/workflows/publicar-spaces.yml).
 Só app.py, motor/, requirements.txt e packages.txt são enviados: o README (configuração do Space)
@@ -610,7 +613,26 @@ def criar_interface():
     return demo, APP_CSS, FORCE_DARK_JS
 
 
-if __name__ == "__main__":
+def criar_app():
+    """As telas do 1.0 em / e a API do motor do site ao lado, num processo só.
+
+    GUARDA: o motor mora no Space do 1.0 porque o Hugging Face cobra para criar Space Docker ou
+    Gradio novo, e este já roda na CPU gratuita. A API entra antes do Gradio, que monta em / e
+    responderia por todas as rotas.
+    """
+    import gradio as gr
+    from fastapi import FastAPI
+
+    from motor.api import rotas
+
     demo, app_css, force_dark_js = criar_interface()
-    demo.launch(debug=False, show_error=True, css=app_css, js=force_dark_js,
-                theme=__import__('gradio').themes.Soft(primary_hue="blue"))
+    app = FastAPI(docs_url=None, redoc_url=None)
+    app.include_router(rotas)
+    return gr.mount_gradio_app(app, demo, path="/", show_error=True, ssr_mode=False, css=app_css,
+                               js=force_dark_js, theme=gr.themes.Soft(primary_hue="blue"))
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(criar_app(), host="0.0.0.0", port=int(os.environ.get("GRADIO_SERVER_PORT", "7860")))

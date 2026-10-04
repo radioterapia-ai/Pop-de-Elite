@@ -1,6 +1,8 @@
 -r requirements.txt
 fastapi>=0.110
 uvicorn>=0.29
+# GUARDA: a mesma versão do sdk_version do Space do 1.0, onde a API do motor também roda
+gradio==6.10.0
 httpx>=0.27
 pytest
 ruff

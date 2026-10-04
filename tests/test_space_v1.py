@@ -4,6 +4,8 @@ import importlib.util
 import json
 from pathlib import Path
 
+import pytest
+
 RAIZ = Path(__file__).resolve().parent.parent
 EXEMPLOS = RAIZ / "exemplos"
 
@@ -58,3 +60,19 @@ def test_colar_tcle_monta_o_texto_institucional(monkeypatch):
     caminho, info, meta = app.processar(colado, "#283264", "", "", "", None)
     assert caminho and caminho.endswith(".docx") and Path(caminho).exists(), info
     assert Path(caminho).name.startswith("CONS-END-001_")
+
+
+def test_o_space_do_1_0_serve_tambem_a_api_do_motor(monkeypatch):
+    pytest.importorskip("gradio")
+    from fastapi.testclient import TestClient
+
+    monkeypatch.setenv("POP_MOTOR_TOKEN", "teste")
+    monkeypatch.setenv("POP_SEM_IMAGENS", "1")
+    with TestClient(carregar_app().criar_app()) as cliente:
+        assert cliente.get("/saude").json()["diagramas"] == "bpmn"
+        assert cliente.post("/renderizar", json={}).status_code == 401, "sem o token, a API recusa"
+        r = cliente.post("/renderizar", json={"word": json.loads(texto("pop_linac_manutencao.json"))},
+                         headers={"X-Pop-Token": "teste"})
+        assert r.status_code == 200 and r.json()["arquivos"][0]["formato"] == "word"
+        pagina = cliente.get("/")
+        assert pagina.status_code == 200 and "text/html" in pagina.headers["content-type"], "as telas do 1.0 continuam em /"

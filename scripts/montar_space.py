@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""Monta a pasta do Space do Hugging Face (motor de documentos) e, se pedido, publica.
+"""Monta a pasta de um Space Docker só com o motor de documentos (opcional) e, se pedido, publica.
+
+No radioterapia.ai a API do motor roda dentro do Space do 1.0 (scripts/montar_space_v1.py); este
+Space avulso serve a quem quiser hospedar só o motor. O Hugging Face cobra para criar Space Docker.
 
     python scripts/montar_space.py                       # cria _montagem/space/
-    python scripts/montar_space.py --enviar Radioterapia-AI/pop-de-elite-motor
+    python scripts/montar_space.py --enviar DONO/NOME
                                                          # publica (precisa de HF_TOKEN com escrita)
 
 A pasta _montagem/space/ também pode ser arrastada para "Files → Add file → Upload files"
