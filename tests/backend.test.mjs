@@ -659,6 +659,24 @@ test("revisão: depois da auditoria, a triagem e a geração do Word levam o blo
   assert.ok(sistemaWord("CHK", [], true).includes("<revisao_de_documento_existente>"), "vale também no texto institucional");
 });
 
+test("site: toda interação acorda o motor em segundo plano, com o token; a montagem não precisa", async () => {
+  const pendentes = [];
+  const ctx = { waitUntil: (p) => pendentes.push(p) };
+  const acordou = async (rota, corpo, cab = {}) => {
+    pedidosSaudeMotor.length = 0;
+    pendentes.length = 0;
+    roteiroGemini = [{ texto: "Entendi." }];
+    await tratarPop(pedido(rota, corpo, { ...comSessao, ...cab }), ENV_SITE, ctx, anfitriaoDoSite(novoEstado()));
+    await Promise.all(pendentes);
+    return pedidosSaudeMotor.map((c) => c["x-pop-token"]);
+  };
+  assert.deepEqual(await acordou("conversa", { historico: [{ papel: "usuario", texto: "a" }, { papel: "assistente", texto: "b" },
+    { papel: "usuario", texto: "c" }, { papel: "assistente", texto: "d" }, { papel: "usuario", texto: "e" }] }), ["token-motor"],
+  "não só nas primeiras mensagens");
+  assert.deepEqual(await acordou("chave", {}, { "x-pop-chave": CHAVE_PROPRIA }), ["token-motor"], "a chave colada também acorda");
+  assert.deepEqual(await acordou("renderizar", { word: { metadata: {} } }), [], "a montagem já usa o motor");
+});
+
 test("site: saúde devolve o uso do dia e acorda o motor com o token", async () => {
   const estado = novoEstado({ usado: 320000 });
   pedidosSaudeMotor.length = 0;

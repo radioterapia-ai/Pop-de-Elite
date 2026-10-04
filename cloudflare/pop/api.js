@@ -42,6 +42,9 @@ export async function tratarPop(request, env = {}, ctx = {}, criarAnfitriao = an
     await host.limitar(usuario, rota);
     const chaveUsuario = chaveDoUsuario(request);
     const contexto = { env, request, ctx, host, usuario, chaveUsuario };
+    // GUARDA: toda interação acorda o motor em segundo plano. O Space gratuito dorme sem uso e leva
+    // cerca de 1 minuto para subir, tempo que a triagem cobre; a saúde bate nele por conta própria.
+    if (rota !== "saude" && rota !== "renderizar") acordarMotor(host, ctx);
     let resposta;
     if (rota === "saude" && request.method === "GET") resposta = await rotaSaude(contexto);
     else if (request.method !== "POST") throw erro("pop_metodo_invalido");
@@ -188,7 +191,6 @@ async function rotaConversa({ env, request, ctx, host, usuario, chaveUsuario }) 
     saida: (u.candidatesTokenCount || 0) + (u.thoughtsTokenCount || 0),
     ...(chaveUsuario ? { chave: "propria" } : {}),
   });
-  if (historico.length <= 2) acordarMotor(host, ctx);
   const chamada = r.chamadas.find((c) => c.name === "gerar_documentos");
   if (chamada) {
     const args = { ...(chamada.args || {}), ...(escolhido ? { tipo_documento: escolhido } : {}) };
@@ -561,7 +563,6 @@ async function rotaAuditar({ env, request, ctx, host, usuario, chaveUsuario }) {
     entrada: u.promptTokenCount || 0, saida: (u.candidatesTokenCount || 0) + (u.thoughtsTokenCount || 0),
     ...(chaveUsuario ? { chave: "propria" } : {}),
   });
-  acordarMotor(host, ctx);
   if (!r.texto) {
     const aviso = r.bloqueio || r.fim === "SAFETY" || r.fim === "PROHIBITED_CONTENT" ? "pop_ia_recusou" : "pop_ia_sem_resposta";
     return json({ texto: "", aviso, uso_dia: usoDia });
