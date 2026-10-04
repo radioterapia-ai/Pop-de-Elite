@@ -1,0 +1,47 @@
+# Worker AVULSO do POP de Elite (worker.js): para testar com a sua própria chave, fora do site.
+# No radioterapia.ai o módulo entra no Worker do site, com o anfitrião do site, e nada deste arquivo
+# vale lá: login, chave, teto e modelo são do site.
+#
+# Copie para wrangler.toml e rode, dentro desta pasta:  npx wrangler deploy
+name = "pop-de-elite-api"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+# Sem rota no domínio do site: o Worker fica em https://pop-de-elite-api.<sua-conta>.workers.dev.
+# A página de teste (site/pop-de-elite/, servida de outro endereço) aponta para ele no config-site.js:
+#   window.POP_DE_ELITE_CONFIG = { api: "https://pop-de-elite-api.<sua-conta>.workers.dev/api/pop" };
+# A rota de áudio é do site e não existe aqui. Para testar no próprio computador, o mais simples é
+# scripts/servidor_local.mjs, que serve a página e a API juntas e lê as mesmas variáveis.
+
+[vars]
+# Endereços da página de teste que podem chamar a API (separados por vírgula). Fora do site não há
+# login: a origem é a barreira.
+POP_ORIGENS = "http://127.0.0.1:8788,http://localhost:8788"
+# Endereço do Space do motor (Hugging Face)
+POP_MOTOR_URL = "https://radioterapia-ai-pop-de-elite-motor.hf.space"
+# Onde está publicado o corpus fatiado (indice.json e secoes/), gerado por scripts/fatiar_tratados.py.
+# O do radioterapia.ai não é público: use o seu, ou o de exemplo (tests/fixtures/corpus/).
+POP_CORPUS_URL = "https://<onde-voce-publicou>/pop-de-elite/corpus/"
+# Modelos (nomes como aparecem no Google AI Studio). O site usa um modelo de texto só; aqui também,
+# salvo se POP_MODELO_LEVE (triagem, Excel, PowerPoint e reparo) ou POP_MODELO_PESADO (Word) forem definidos.
+POP_MODELO = "gemini-3.8-flash"
+POP_MODELO_IMAGEM = "gemini-3.1-flash-lite-image"
+# Teto diário de tokens por visitante (dia de São Paulo; 0 = sem teto). No avulso o contador fica na
+# memória do Worker e zera quando ele reinicia: serve para teste, não para cobrança.
+POP_TETO_DIARIO = "400000"
+# Mínimo de slides do treinamento e palavras do Tratado enviadas na geração do Word
+POP_PPT_MIN_SLIDES = "30"
+POP_ORCAMENTO_PALAVRAS = "12000"
+# Rodadas de correção automática quando o JSON não cumpre as regras (0 a 3)
+POP_CORRECOES = "1"
+# Opcionais:
+#   POP_TOKEN_TESTE = "..."      exige o cabeçalho X-Token com este valor (simula a sessão do site)
+#   POP_USUARIO_NOME = "..."     autor pré-preenchido quando POP_TOKEN_TESTE está ligado
+#   POP_DESATIVADO = "1"         desliga o módulo (pop_desativado)
+#   POP_SEM_LIMITE = "1"         sem limite por IP (só para testes automáticos)
+#   POP_SEM_LOG = "1"            sem as linhas de log com números
+
+# Segredos (nunca neste arquivo):
+#   npx wrangler secret put GEMINI_API_KEY        chave da API do Gemini (Google AI Studio)
+#   npx wrangler secret put POP_MOTOR_TOKEN       o mesmo valor do segredo do Space do motor
+#   npx wrangler secret put POP_MOTOR_HF_TOKEN    só se o Space for privado (token de leitura do HF)

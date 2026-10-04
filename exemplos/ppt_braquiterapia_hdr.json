@@ -1,0 +1,576 @@
+{
+  "metadata_ppt": {
+    "apresentacao": "Treinamento_Braquiterapia_Ginecologica_HDR",
+    "codigo": "PPT-RTB-001",
+    "estilo_visual": "cientifico"
+  },
+  "slides": [
+    {
+      "numero": 1,
+      "tipo": "capa",
+      "titulo": "Braquiterapia Ginecológica HDR",
+      "subtitulo": "Sonda e anel, Irídio-192, sob anestesia — treinamento institucional",
+      "palestrante": "Comitê da Qualidade e Física Médica"
+    },
+    {
+      "numero": 2,
+      "tipo": "disclaimer_creditos",
+      "titulo": "Escopo deste treinamento",
+      "declaracao": "Material de padronização de processo e segurança, alinhado ao POP-RTB-001. Não substitui julgamento clínico nem a supervisão do Físico Médico Responsável Técnico."
+    },
+    {
+      "numero": 3,
+      "tipo": "agenda",
+      "titulo": "O que veremos",
+      "topicos": [
+        "Por que este procedimento é diferente",
+        "Antes da indução anestésica",
+        "A inserção do aplicador",
+        "Imagem, planejamento e dupla checagem",
+        "Irradiação e emergência radiológica",
+        "Registro, indicadores e auditoria"
+      ]
+    },
+    {
+      "numero": 4,
+      "tipo": "transicao_tema",
+      "numero_secao": 1,
+      "titulo_secao": "Por que este procedimento é diferente",
+      "subtitulo_secao": "Paciente na sala e fonte radioativa no mesmo processo"
+    },
+    {
+      "numero": 5,
+      "tipo": "texto_duas_colunas",
+      "titulo": "Duas famílias de risco convivem",
+      "coluna_esq": {
+        "titulo": "Com a paciente",
+        "bullets": [
+          "Identificação **antes** da indução",
+          "Perfuração uterina sem dor referida",
+          "Dose em reto, bexiga e sigmoide",
+          "Evento anestésico fora do centro cirúrgico"
+        ]
+      },
+      "coluna_dir": {
+        "titulo": "Fonte e equipamento",
+        "bullets": [
+          "Fonte não recolhida ao cofre",
+          "Atividade sem correção de decaimento",
+          "Intertravamento inoperante",
+          "Exposição ocupacional da equipe"
+        ]
+      },
+      "referencia_rodape": "POP-RTB-001"
+    },
+    {
+      "numero": 6,
+      "tipo": "imagem_web_direita",
+      "titulo": "O aplicador sonda e anel",
+      "imagem_query": "gynecological brachytherapy applicator tandem ring",
+      "bullets": [
+        "Sonda intrauterina e anel vaginal **solidários**",
+        "Fixa a geometria entre útero e fundo de saco",
+        "Permite distribuição reprodutível entre frações"
+      ],
+      "legenda": "A geometria fixa é o que torna a dose previsível",
+      "referencia_rodape": "AAPM TG-56"
+    },
+    {
+      "numero": 7,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ A paciente anestesiada não confirma nada",
+      "bullet_points": [
+        "A identificação com **dois identificadores** acontece ANTES da indução.",
+        "Depois da indução a barreira deixa de ser verificável.",
+        "Não existe forma de deslocar esta checagem para mais tarde."
+      ]
+    },
+    {
+      "numero": 8,
+      "tipo": "transicao_tema",
+      "numero_secao": 2,
+      "titulo_secao": "Antes da indução anestésica",
+      "subtitulo_secao": "As barreiras que não podem ser deslocadas"
+    },
+    {
+      "numero": 9,
+      "tipo": "lista_dupla_circular",
+      "titulo": "Conferências obrigatórias na recepção",
+      "itens": [
+        {
+          "titulo": "Jejum",
+          "texto": "Confirmado e registrado no TASY"
+        },
+        {
+          "titulo": "Pré-anestésica",
+          "texto": "Avaliação vigente em prontuário"
+        },
+        {
+          "titulo": "Consentimento",
+          "texto": "Assinado, dúvidas sanadas"
+        },
+        {
+          "titulo": "Identificação",
+          "texto": "Dois identificadores, perguntando ativamente"
+        },
+        {
+          "titulo": "Prescrição",
+          "texto": "Dose, fração e ponto conferidos"
+        },
+        {
+          "titulo": "Time-out",
+          "texto": "Em voz alta, com toda a equipe"
+        }
+      ],
+      "referencia_rodape": "Metas 1 e 4"
+    },
+    {
+      "numero": 10,
+      "tipo": "imagem_web_panoramica",
+      "titulo": "Time-out multiprofissional",
+      "imagem_query": "surgical team time out checklist operating room",
+      "legenda": "Médico, anestesiologista, enfermeiro, físico e técnico — todos param",
+      "referencia_rodape": "WHO Surgical Safety Checklist"
+    },
+    {
+      "numero": 11,
+      "tipo": "quatro_colunas",
+      "titulo": "Quem responde pelo quê",
+      "colunas": [
+        {
+          "titulo": "Radio-oncologista",
+          "icone": "star",
+          "texto": "Indicação, inserção, volume alvo e retirada. Não libera equipamento."
+        },
+        {
+          "titulo": "Anestesiologista",
+          "icone": "shield",
+          "texto": "Via aérea e estabilidade enquanto a paciente estiver anestesiada."
+        },
+        {
+          "titulo": "Físico Médico RT",
+          "icone": "gear",
+          "texto": "Decaimento, plano, ausência de deslocamento e a assinatura da liberação."
+        },
+        {
+          "titulo": "Enfermagem",
+          "icone": "sun",
+          "texto": "Jejum, identificação, material estéril e recuperação pós-anestésica."
+        }
+      ]
+    },
+    {
+      "numero": 12,
+      "tipo": "imagem_web_esquerda",
+      "titulo": "Preparo da sala",
+      "imagem_query": "brachytherapy afterloader treatment room",
+      "bullets": [
+        "Contentor blindado **dentro** da sala",
+        "Pinça longa ao alcance",
+        "Detector independente do equipamento",
+        "Monitor de área e sinalização testados"
+      ],
+      "legenda": "O material de emergência não fica no corredor",
+      "referencia_rodape": "Norma ANSN 6.10"
+    },
+    {
+      "numero": 13,
+      "tipo": "transicao_tema",
+      "numero_secao": 3,
+      "titulo_secao": "A inserção do aplicador",
+      "subtitulo_secao": "Onde a anatomia e a dose se encontram"
+    },
+    {
+      "numero": 14,
+      "tipo": "jornada_caso_clinico",
+      "titulo": "Sequência da inserção",
+      "eventos": [
+        {
+          "data": "1",
+          "titulo": "Posicionamento",
+          "descricao": "Litotomia, monitorização contínua",
+          "subitens": [
+            "Proteção de pontos de apoio"
+          ]
+        },
+        {
+          "data": "2",
+          "titulo": "Antissepsia e sonda vesical",
+          "descricao": "Balão como referência na imagem",
+          "subitens": []
+        },
+        {
+          "data": "3",
+          "titulo": "Histerometria",
+          "descricao": "Sob visão direta, técnica delicada",
+          "subitens": [
+            "Perfuração não dói sob anestesia"
+          ]
+        },
+        {
+          "data": "4",
+          "titulo": "Sonda e anel",
+          "descricao": "Até a profundidade medida",
+          "subitens": [
+            "Registrar profundidade e diâmetro"
+          ]
+        },
+        {
+          "data": "5",
+          "titulo": "Tamponamento",
+          "descricao": "Afasta reto e bexiga",
+          "subitens": [
+            "É o que reduz dose nesses órgãos"
+          ]
+        }
+      ],
+      "referencia_rodape": "POP-RTB-001, seção 6.2"
+    },
+    {
+      "numero": 15,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ Perfuração uterina",
+      "bullet_points": [
+        "É a complicação mecânica **mais frequente** da inserção.",
+        "Sob anestesia a paciente **não refere dor** — não há sinal clínico.",
+        "A suspeita se confirma por trajeto anômalo **na imagem**.",
+        "Confirmada, suspende-se a fração."
+      ]
+    },
+    {
+      "numero": 16,
+      "tipo": "imagem_web_direita",
+      "titulo": "Por que o tamponamento importa",
+      "imagem_query": "pelvic anatomy uterus bladder rectum diagram",
+      "bullets": [
+        "Aumenta a distância entre a fonte e a mucosa",
+        "Reto e bexiga recebem menos dose",
+        "Reduz fístula, sangramento tardio e estenose"
+      ],
+      "legenda": "Distância é a barreira física mais barata que existe",
+      "referencia_rodape": "ICRP 97"
+    },
+    {
+      "numero": 17,
+      "tipo": "transicao_tema",
+      "numero_secao": 4,
+      "titulo_secao": "Imagem, planejamento e checagem",
+      "subtitulo_secao": "A costura onde o erro mora"
+    },
+    {
+      "numero": 18,
+      "tipo": "arvore_decisao_clinica",
+      "titulo": "O aplicador se deslocou?",
+      "nodo_raiz": {
+        "pergunta": "A posição do aplicador é a mesma da aquisição de imagem?",
+        "ramo_sim": {
+          "acao": "Conectar cateteres conferindo canal e comprimento, e prosseguir para a liberação."
+        },
+        "ramo_nao": {
+          "acao": "NÃO irradiar. Reposicionar, repetir imagem e planejamento, submeter a nova dupla checagem.",
+          "destaque": "risk_red"
+        }
+      },
+      "referencia_rodape": "POP-RTB-001"
+    },
+    {
+      "numero": 19,
+      "tipo": "tabela_avancada",
+      "titulo": "Cada parâmetro controla um risco",
+      "colunas": [
+        "Parâmetro",
+        "Critério",
+        "Risco que controla"
+      ],
+      "linhas": [
+        [
+          "Atividade corrigida",
+          "Recalculada na data",
+          "Dose divergente da prescrita"
+        ],
+        [
+          "Dupla checagem",
+          "100% dos planos",
+          "Erro de digitação no tempo"
+        ],
+        [
+          "Cobertura D90",
+          "Conforme prescrição",
+          "Subdose e perda de controle"
+        ],
+        [
+          "D2cc reto e bexiga",
+          "Dentro da restrição",
+          "Fístula e sangramento tardio"
+        ],
+        [
+          "Posição do aplicador",
+          "Sem deslocamento",
+          "Distribuição inteira deslocada"
+        ]
+      ],
+      "comentario": "A coluna da direita é o que o auditor consegue avaliar. A da esquerda é o que o físico executa.",
+      "referencia_rodape": "AAPM TG-43 e TG-59"
+    },
+    {
+      "numero": 20,
+      "tipo": "imagem_web_panoramica",
+      "titulo": "Planejamento a cada fração",
+      "imagem_query": "brachytherapy treatment planning system dose distribution",
+      "legenda": "O contorno é refeito toda vez: a anatomia e a posição mudam entre frações",
+      "referencia_rodape": "AAPM TG-56"
+    },
+    {
+      "numero": 21,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ Dupla checagem independente",
+      "bullet_points": [
+        "Segundo físico, **sem acesso** aos parâmetros do planejador original.",
+        "Confere tempo por posição, atividade na data, canal e restrições.",
+        "É a barreira que impede um erro de digitação entregar dose **várias vezes** maior.",
+        "Divergência bloqueia a liberação até reconciliação."
+      ]
+    },
+    {
+      "numero": 22,
+      "tipo": "transicao_tema",
+      "numero_secao": 5,
+      "titulo_secao": "Irradiação e emergência",
+      "subtitulo_secao": "A fonte precisa voltar ao cofre"
+    },
+    {
+      "numero": 23,
+      "tipo": "imagem_web_esquerda",
+      "titulo": "Durante a irradiação",
+      "imagem_query": "radiation therapy control room monitor",
+      "bullets": [
+        "Sala vazia, porta fechada, intertravamento acionado",
+        "Sinalização luminosa ativa",
+        "Paciente sob observação por **vídeo e áudio** contínuos"
+      ],
+      "legenda": "Ninguém dentro, ninguém sem ver",
+      "referencia_rodape": "Norma ANSN 6.10"
+    },
+    {
+      "numero": 24,
+      "tipo": "arvore_decisao_clinica",
+      "titulo": "Ao término do tempo programado",
+      "nodo_raiz": {
+        "pergunta": "A fonte recolheu ao cofre?",
+        "ramo_sim": {
+          "acao": "Confirmar com o detector independente na entrada, e só então entrar na sala."
+        },
+        "ramo_nao": {
+          "acao": "EMERGÊNCIA. Interrupção de emergência, recolhimento manual pela manivela, retirada com pinça e blindagem.",
+          "destaque": "risk_red"
+        }
+      },
+      "referencia_rodape": "ICRP 97"
+    },
+    {
+      "numero": 25,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ Nunca entre com base só no console",
+      "bullet_points": [
+        "A confirmação é por **dois meios independentes**: console E detector portátil.",
+        "O console pode indicar recolhimento que não ocorreu.",
+        "O detector é o único que mede a realidade da sala."
+      ]
+    },
+    {
+      "numero": 26,
+      "tipo": "piramide_3d",
+      "titulo": "Resposta à fonte retida",
+      "niveis": [
+        {
+          "titulo": "Interromper",
+          "descricao": "Botão de emergência"
+        },
+        {
+          "titulo": "Recolher",
+          "descricao": "Manivela manual do afterloader"
+        },
+        {
+          "titulo": "Blindar",
+          "descricao": "Pinça longa e contentor na sala"
+        },
+        {
+          "titulo": "Isolar e notificar",
+          "descricao": "Radioproteção e autoridade reguladora"
+        }
+      ],
+      "referencia_rodape": "Norma ANSN 6.10"
+    },
+    {
+      "numero": 27,
+      "tipo": "imagem_web_direita",
+      "titulo": "Levantamento radiométrico",
+      "imagem_query": "geiger counter radiation survey meter",
+      "bullets": [
+        "Junto à paciente, no aplicador e no material descartado",
+        "**Antes** de qualquer manipulação",
+        "Leitura registrada a cada fração"
+      ],
+      "legenda": "Confirma que nenhuma fonte ficou para trás",
+      "referencia_rodape": "CNEN NN-3.01"
+    },
+    {
+      "numero": 28,
+      "tipo": "transicao_tema",
+      "numero_secao": 6,
+      "titulo_secao": "Registro, indicadores e auditoria",
+      "subtitulo_secao": "O que não está registrado não aconteceu"
+    },
+    {
+      "numero": 29,
+      "tipo": "tres_colunas",
+      "titulo": "Onde cada evidência vive",
+      "colunas": [
+        {
+          "titulo": "TASY",
+          "icone": "star",
+          "texto": "Consentimento, fração realizada, dose entregue e intercorrências."
+        },
+        {
+          "titulo": "Record and verify",
+          "icone": "gear",
+          "texto": "Plano aprovado e parâmetros da irradiação por fração."
+        },
+        {
+          "titulo": "Física Médica",
+          "icone": "shield",
+          "texto": "Constância do afterloader, liberação assinada e leituras radiométricas."
+        }
+      ],
+      "referencia_rodape": "POP-RTB-001, seção 8"
+    },
+    {
+      "numero": 30,
+      "tipo": "funil_processos_3d",
+      "titulo": "O que o auditor percorre",
+      "etapas": [
+        {
+          "titulo": "Frações realizadas no mês",
+          "valor": "todas"
+        },
+        {
+          "titulo": "Com liberação assinada",
+          "valor": "100%"
+        },
+        {
+          "titulo": "Com dupla checagem",
+          "valor": "100%"
+        },
+        {
+          "titulo": "Com recolhimento confirmado",
+          "valor": "100%"
+        }
+      ],
+      "referencia_rodape": "Metodologia de rastreamento"
+    },
+    {
+      "numero": 31,
+      "tipo": "tabela_avancada",
+      "titulo": "Indicadores do procedimento",
+      "colunas": [
+        "Indicador",
+        "Meta",
+        "Fonte"
+      ],
+      "linhas": [
+        [
+          "Recolhimento confirmado por dois meios",
+          "100%",
+          "Registro radiométrico"
+        ],
+        [
+          "Planos com dupla checagem",
+          "100%",
+          "Formulário de liberação"
+        ],
+        [
+          "Restrições de D2cc atendidas",
+          "≥ 95%",
+          "Sistema de planejamento"
+        ],
+        [
+          "Adesão ao time-out",
+          "100%",
+          "Auditoria / TASY"
+        ],
+        [
+          "Intercorrências por fração",
+          "< 2%",
+          "Notificação no TASY"
+        ]
+      ],
+      "referencia_rodape": "Análise crítica mensal"
+    },
+    {
+      "numero": 32,
+      "tipo": "imagem_web_panoramica",
+      "titulo": "Gestão integrada",
+      "imagem_query": "hospital quality management meeting dashboard",
+      "legenda": "Indicador que não é usado para decidir não sustenta a gestão integrada da qualidade",
+      "referencia_rodape": "Gestão integrada da qualidade"
+    },
+    {
+      "numero": 33,
+      "tipo": "infografico_resumo",
+      "titulo": "Recapitulando",
+      "tema_central": "Braquiterapia HDR",
+      "subtitulo_central": "Sonda e anel",
+      "ideias": [
+        {
+          "titulo": "Antes",
+          "descricao": "Identificar antes da indução e conferir a sala"
+        },
+        {
+          "titulo": "Durante",
+          "descricao": "Não deslocar, checar duas vezes, liberar por assinatura"
+        },
+        {
+          "titulo": "Depois",
+          "descricao": "Confirmar recolhimento por dois meios e registrar"
+        }
+      ],
+      "referencia_rodape": "POP-RTB-001"
+    },
+    {
+      "numero": 34,
+      "tipo": "take_home",
+      "titulo": "Mensagens centrais",
+      "mensagens": [
+        "**A identificação acontece antes da indução** — depois ela deixa de ser verificável.",
+        "**O aplicador não pode se deslocar** entre a imagem e a irradiação.",
+        "**A fonte volta ao cofre, e você confirma por dois meios** antes de entrar.",
+        "**A liberação é ato assinado pelo Físico Médico Responsável Técnico.**"
+      ]
+    },
+    {
+      "numero": 35,
+      "tipo": "referencias",
+      "titulo": "Referências",
+      "referencias_completas": [
+        "Norma ANSN 6.10 — Resolução CNEN nº 277/2021.",
+        "CNEN NN-3.01 — Diretrizes básicas de proteção radiológica.",
+        "ANVISA. RDC nº 611/2022.",
+        "AAPM TG-43 e TG-43U1 — dosimetria de fontes de braquiterapia.",
+        "AAPM TG-56 — Code of practice for brachytherapy physics.",
+        "AAPM TG-59 — High dose-rate brachytherapy treatment delivery.",
+        "ICRP Publication 97 — Prevention of high-dose-rate brachytherapy accidents.",
+        "IAEA SSG-46 — Radiation protection and safety in medical uses of ionizing radiation.",
+        "ANVISA. RDC nº 36/2013 — segurança do paciente."
+      ]
+    },
+    {
+      "numero": 36,
+      "tipo": "agradecimento",
+      "titulo": "Treinamento concluído",
+      "palestrante": "Comitê da Qualidade e Física Médica",
+      "contatos": [
+        "Assine a lista de presença — é evidência de treinamento para auditoria"
+      ]
+    }
+  ]
+}

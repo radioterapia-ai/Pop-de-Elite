@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "tipo_documento": "FORM",
+    "codigo": "FORM-NSP-001",
+    "titulo": "Notificação de incidente de segurança do paciente",
+    "setor": "Núcleo de Segurança do Paciente",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "interno",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Segurança do Paciente", "cargo": "Núcleo de Segurança do Paciente"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "paragrafo", "texto": "A notificação é **não punitiva**: serve para aprender com o incidente e corrigir falhas do processo, conforme a Cultura Justa. A identificação do notificador é opcional."},
+    {"tipo": "titulo", "texto": "Dados do incidente"},
+    {"tipo": "campos", "itens": [
+      {"rotulo": "Data e hora do incidente", "linhas": 1},
+      {"rotulo": "Setor onde ocorreu", "linhas": 1},
+      {"rotulo": "Prontuário do paciente envolvido (quando houver)", "linhas": 1}
+    ]},
+    {"tipo": "titulo", "texto": "Tipo de incidente"},
+    {"tipo": "caixas", "itens": [
+      "Identificação do paciente",
+      "Medicação",
+      "Queda",
+      "Lesão por pressão",
+      "Procedimento ou cirurgia",
+      "Outro"
+    ]},
+    {"tipo": "titulo", "texto": "Grau de dano"},
+    {"tipo": "caixas", "itens": ["Sem dano", "Leve", "Moderado", "Grave", "Óbito"]},
+    {"tipo": "titulo", "texto": "Descrição"},
+    {"tipo": "campos", "itens": [
+      {"rotulo": "O que aconteceu (fatos, sem julgamento)", "linhas": 4},
+      {"rotulo": "Ações imediatas tomadas", "linhas": 3},
+      {"rotulo": "Notificador (opcional)", "linhas": 1}
+    ]}
+  ]
+}

@@ -1,0 +1,69 @@
+name: Bug report
+description: Something behaves incorrectly, or a document comes out wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not include patient data.** No names, no record numbers, no identified
+        exams, no photographs of patients — not in the text, not in a screenshot,
+        not in an attached document.
+
+        For anything that exposes what people typed or attached, use private
+        vulnerability reporting instead — see SECURITY.md.
+  - type: checkboxes
+    id: no-patient-data
+    attributes:
+      label: Patient data
+      options:
+        - label: I have not attached patient data — no names, record numbers, identified exams or photographs of patients
+          required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it happened
+      options:
+        - radioterapia.ai (POP de Elite 2.0)
+        - POP de Elite 1.0 (Hugging Face)
+        - The engine or the 1.0 app, built from this repository
+    validations:
+      required: true
+  - type: dropdown
+    id: document
+    attributes:
+      label: Document type
+      options:
+        - Standard operating procedure (POP)
+        - Policy
+        - Protocol
+        - Guideline
+        - Plan
+        - Standard
+        - Program
+        - Bylaws
+        - Manual
+        - Indicator technical sheet
+        - Code of conduct
+        - Informed consent form (template)
+        - Acknowledgment form
+        - Checklist
+        - Form
+        - Information leaflet
+        - Technical note
+        - Not about a document
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Interface language
+      options: [Portuguese, English, Spanish, French, German, Italian, Polish, Chinese, Japanese, Korean, Arabic, Bengali]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did, and what happened
+      description: The steps, then what you expected, then what you got. For a wrong document, say which file (Word, Excel or PowerPoint) and which part.
+    validations:
+      required: true

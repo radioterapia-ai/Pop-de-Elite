@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "titulo_processo": "Identificação Segura do Paciente e Time-out Pré-Tratamento em Radioterapia",
+    "codigo": "POP-RTX-002",
+    "versao": "01",
+    "tipo_documento": "POP",
+    "natureza_processo": "assistencial",
+    "idioma": "pt",
+    "classificacao": "interno",
+    "setor": "Radioterapia — Enfermagem e Técnicos em Radioterapia",
+    "data_elaboracao": "10/2026",
+    "data_revisao": "",
+    "validade": "10/2028",
+    "elaborado_por": {
+      "nome": "Especialista em Enfermagem em Radioterapia",
+      "cargo": "Enfermeira(o) Responsável Técnica(o)"
+    },
+    "revisado_por": {
+      "nome": "",
+      "cargo": ""
+    },
+    "aprovado_por": {
+      "nome": "",
+      "cargo": ""
+    }
+  },
+  "secoes": {
+    "objetivo": "Padronizar a identificação segura do paciente e a pausa de confirmação (time-out) imediatamente antes de cada sessão de radioterapia, garantindo que o paciente certo receba o tratamento certo, na região certa, com o plano e os acessórios certos. O procedimento operacionaliza a Meta 1 (identificação correta do paciente) e a Meta 5 (higiene das mãos) das Metas Internacionais de Segurança do Paciente.",
+    "campo_aplicacao": "Aplica-se a todas as sessões de teleterapia e braquiterapia do Serviço de Radioterapia, em todos os turnos, incluindo primeira sessão, sessões subsequentes, replanejamentos e atendimentos de urgência. Envolve técnicos em radioterapia, enfermagem, física médica e radio-oncologia.",
+    "conceitos": [
+      {
+        "termo": "Identificador do paciente",
+        "definicao": "Dado próprio do paciente usado para confirmar quem ele é: nome completo e data de nascimento (ou número de prontuário). Número do quarto, diagnóstico ou horário de agenda nunca são identificadores."
+      },
+      {
+        "termo": "Time-out",
+        "definicao": "Pausa obrigatória, com toda a equipe da sala, para confirmar em voz alta paciente, região, plano, dose da sessão e acessórios antes de liberar o feixe."
+      },
+      {
+        "termo": "Sistema de registro e verificação (R&V)",
+        "definicao": "Software que guarda o plano aprovado e bloqueia parâmetros de tratamento fora do prescrito."
+      },
+      {
+        "termo": "IGRT",
+        "definicao": "Radioterapia guiada por imagem: imagem de verificação adquirida na mesa para confirmar o posicionamento antes do feixe."
+      },
+      {
+        "termo": "Acessórios de tratamento",
+        "definicao": "Máscaras termoplásticas, bolus, colchões de vácuo e demais dispositivos individualizados do paciente."
+      }
+    ],
+    "responsabilidades": [
+      {
+        "papel": "Técnico em Radioterapia",
+        "acoes": "Conduzir a identificação ativa e o time-out, conferir os dados no R&V e só liberar o feixe com todos os itens confirmados."
+      },
+      {
+        "papel": "Enfermagem",
+        "acoes": "Garantir a pulseira de identificação na primeira sessão, avaliar o paciente e apoiar a identificação de pacientes que não conseguem responder."
+      },
+      {
+        "papel": "Física Médica",
+        "acoes": "Aprovar o plano no R&V e apoiar o time-out em primeira sessão, replanejamento e técnicas especiais (SBRT, radiocirurgia)."
+      },
+      {
+        "papel": "Radio-oncologista",
+        "acoes": "Prescrever e aprovar o plano; participar do time-out de primeira sessão e decidir sobre qualquer divergência encontrada."
+      },
+      {
+        "papel": "Recepção",
+        "acoes": "Conferir os dois identificadores no cadastro e na chegada, sem chamar o paciente apenas pelo primeiro nome."
+      }
+    ],
+    "recursos": [
+      "Pulseira de identificação com nome completo e data de nascimento",
+      "Sistema de registro e verificação (R&V) com foto do paciente",
+      "Ficha de tratamento com prescrição e plano aprovados",
+      "Checklist impresso ou eletrônico de time-out",
+      "Acessórios individualizados identificados com nome e data de nascimento",
+      "Sistema de imagem para IGRT calibrado",
+      "Dispensador de preparação alcoólica na sala de tratamento e na sala de comando",
+      "Intercomunicador e câmeras de monitoramento do paciente",
+      "Etiquetas de identificação para máscaras e bolus"
+    ],
+    "procedimento": {
+      "acoes_iniciais": [
+        "Higienizar as mãos com preparação alcoólica antes do primeiro contato com o paciente (Meta 5), nos cinco momentos da OMS.",
+        {
+          "texto": "Identificar o paciente de forma ativa (Meta 1): pedir que ele diga o nome completo e a data de nascimento e conferir com a pulseira, a ficha e a foto do R&V. Nunca perguntar 'O senhor é o Sr. José?'.",
+          "prioridade": "critica"
+        },
+        "Se o paciente não puder responder (sedação, afasia, criança), confirmar com o acompanhante e com a pulseira, registrando quem confirmou.",
+        "Conferir se os acessórios separados (máscara, bolus, colchão) têm o nome e a data de nascimento do mesmo paciente."
+      ],
+      "execucao_tecnica": [
+        "Posicionar o paciente conforme a ficha de tratamento, usando as marcas de pele e os acessórios individualizados.",
+        {
+          "diagrama": {
+            "tipo": "processo",
+            "titulo": "Sequência do time-out",
+            "conteudo": [
+              {
+                "texto": "Paciente identificado",
+                "forma": "elipse"
+              },
+              {
+                "texto": "Região e lateralidade",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Plano e dose da sessão",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Acessórios conferidos",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Feixe liberado",
+                "forma": "elipse"
+              }
+            ]
+          }
+        },
+        {
+          "texto": "Realizar o time-out com toda a equipe da sala: confirmar em voz alta paciente (dois identificadores), região, lateralidade, plano, fração do dia e acessórios. Qualquer divergência interrompe o tratamento.",
+          "prioridade": "critica"
+        },
+        "Adquirir a imagem de verificação (IGRT) quando prevista e comparar com a imagem de referência antes de liberar o feixe.",
+        "Higienizar as mãos após o contato com o paciente e com superfícies próximas (Meta 5)."
+      ],
+      "acoes_finais": [
+        "Registrar no R&V a sessão realizada, a dose entregue e a confirmação do time-out.",
+        "Retirar o paciente da mesa com segurança, avaliando risco de queda.",
+        "Guardar os acessórios identificados no local próprio, separados por paciente.",
+        "Registrar qualquer divergência como incidente no sistema de notificação, mesmo que tenha sido corrigida antes do tratamento."
+      ]
+    },
+    "riscos": {
+      "assistenciais": [
+        {
+          "risco": "[Risco Crítico] Tratar o paciente errado por confusão de nomes semelhantes ou agenda trocada.",
+          "barreira": "Identificação ativa com dois identificadores conferidos contra pulseira, ficha e foto do R&V (Meta 1)."
+        },
+        {
+          "risco": "[Risco Crítico] Irradiar a região ou a lateralidade errada.",
+          "barreira": "Time-out com confirmação em voz alta da região e da lateralidade e imagem de verificação (IGRT) antes do feixe."
+        },
+        {
+          "risco": "[Risco Alto] Usar acessório de outro paciente (máscara ou bolus), alterando a dose entregue.",
+          "barreira": "Acessórios etiquetados com nome e data de nascimento e conferidos no time-out."
+        },
+        {
+          "risco": "[Risco Moderado] Infecção cruzada pelo contato repetido com pacientes imunossuprimidos.",
+          "barreira": "Higiene das mãos nos cinco momentos (Meta 5) e limpeza da mesa e dos acessórios entre pacientes."
+        },
+        {
+          "risco": "[Risco Moderado] Queda do paciente ao subir ou descer da mesa.",
+          "barreira": "Avaliação do risco de queda, mesa abaixada e apoio da equipe na transferência."
+        }
+      ],
+      "contingencia": [
+        "**Divergência de identificação**: interromper o atendimento → não posicionar o paciente → confirmar identidade com a recepção e o prontuário → notificar o incidente.",
+        "**Divergência no plano ou na região**: não liberar o feixe → acionar física médica e radio-oncologista → aguardar decisão registrada no R&V.",
+        "**Paciente sem pulseira**: identificar com dois identificadores verbais e documento → providenciar nova pulseira antes da sessão.",
+        "**Falha do R&V**: suspender os tratamentos → acionar física médica e TI → não tratar com parâmetros digitados à mão."
+      ]
+    },
+    "registros": [
+      "Registro da sessão e do time-out no sistema R&V",
+      "Checklist de time-out da primeira sessão assinado pela equipe",
+      "Notificações de incidentes e quase-erros no sistema de gestão da qualidade",
+      "Registro de auditoria mensal da adesão ao time-out"
+    ],
+    "indicadores": [
+      {
+        "nome": "Adesão ao time-out completo nas sessões auditadas [Fonte: Auditoria de observação direta]",
+        "meta": "≥ 98%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Incidentes de identificação do paciente com dano [Fonte: Sistema de notificação de incidentes]",
+        "meta": "Zero",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Adesão à higiene das mãos nos cinco momentos [Fonte: Observação direta da CCIH]",
+        "meta": "≥ 85%",
+        "periodicidade": "Trimestral"
+      }
+    ],
+    "referencias": [
+      "World Health Organization. Radiotherapy Risk Profile. Geneva: WHO; 2008.",
+      "Brasil. Ministério da Saúde. Portaria nº 529, de 1º de abril de 2013. Programa Nacional de Segurança do Paciente.",
+      "ANVISA. RDC nº 36, de 25 de julho de 2013. Ações para a segurança do paciente em serviços de saúde.",
+      "Ministério da Saúde, ANVISA, Fiocruz. Protocolo de Identificação do Paciente. 2013.",
+      "ANVISA. RDC nº 611, de 9 de março de 2022. Requisitos sanitários para radiologia diagnóstica e intervencionista e radioterapia.",
+      "CNEN NN-6.10. Requisitos de segurança e proteção radiológica para serviços de radioterapia.",
+      "Ford E, et al. Strategies for effective physics plan and chart review in radiation therapy: AAPM Task Group 275. Med Phys. 2020;47(6):e236–e272.",
+      "American Society for Radiation Oncology. Safety is No Accident: A Framework for Quality Radiation Oncology Care. 2019.",
+      "World Health Organization. WHO Guidelines on Hand Hygiene in Health Care. Geneva: WHO; 2009."
+    ],
+    "anexos": [
+      {
+        "titulo": "Checklist do Time-out Pré-Tratamento",
+        "tipo": "checklist",
+        "descricao": "Aplicado antes de cada sessão; na primeira sessão, assinado por toda a equipe presente.",
+        "conteudo": [
+          "Paciente disse o nome completo e a data de nascimento",
+          "Identificadores conferem com pulseira, ficha e foto do R&V",
+          "Região e lateralidade confirmadas em voz alta",
+          "Plano aprovado e fração do dia conferidos no R&V",
+          "Acessórios com nome e data de nascimento do paciente",
+          "Imagem de verificação aprovada (quando prevista)",
+          "Mãos higienizadas antes do contato"
+        ]
+      },
+      {
+        "titulo": "Identificadores Aceitos e Não Aceitos",
+        "tipo": "tabela",
+        "descricao": "Referência rápida para a equipe.",
+        "colunas": [
+          "Dado",
+          "Aceito como identificador?",
+          "Observação"
+        ],
+        "linhas": [
+          [
+            "Nome completo",
+            "Sim",
+            "Sempre dito pelo paciente"
+          ],
+          [
+            "Data de nascimento",
+            "Sim",
+            "Segundo identificador padrão"
+          ],
+          [
+            "Número do prontuário",
+            "Sim",
+            "Alternativa à data de nascimento"
+          ],
+          [
+            "Número do quarto ou leito",
+            "Não",
+            "Muda durante a internação"
+          ],
+          [
+            "Diagnóstico ou horário da agenda",
+            "Não",
+            "Não é exclusivo do paciente"
+          ]
+        ]
+      },
+      {
+        "titulo": "Fluxo de Decisão diante de Divergência",
+        "tipo": "fluxograma",
+        "descricao": "Quem faz o quê do check-in à liberação do feixe. Qualquer divergência interrompe o atendimento.",
+        "raias": [
+          "Recepção",
+          "Técnico em Radioterapia",
+          "Física Médica",
+          "Enfermagem"
+        ],
+        "conteudo": [
+          {
+            "id": "i",
+            "tipo": "inicio",
+            "texto": "Paciente chega para a sessão",
+            "raia": "Recepção"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "texto": "Conferir cadastro e agenda do dia",
+            "raia": "Recepção"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "texto": "Identificação ativa com dois identificadores",
+            "raia": "Técnico em Radioterapia",
+            "critico": true
+          },
+          {
+            "id": "d1",
+            "tipo": "decisao",
+            "texto": "Identificação confere?",
+            "sim": "t3",
+            "nao": "t6"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "texto": "Time-out com toda a equipe da sala",
+            "raia": "Técnico em Radioterapia",
+            "critico": true
+          },
+          {
+            "id": "d2",
+            "tipo": "decisao",
+            "texto": "Plano e acessórios conferem?",
+            "sim": "t4",
+            "nao": "t5"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "texto": "Liberar o feixe e registrar no R&V",
+            "raia": "Técnico em Radioterapia",
+            "proximo": "f1"
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "texto": "Revisar o plano e decidir a conduta",
+            "raia": "Física Médica",
+            "proximo": "t3"
+          },
+          {
+            "id": "t6",
+            "tipo": "tarefa",
+            "texto": "Suspender e notificar o incidente",
+            "raia": "Enfermagem",
+            "proximo": "f2"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "texto": "Sessão realizada",
+            "raia": "Técnico em Radioterapia"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "texto": "Atendimento suspenso",
+            "raia": "Enfermagem"
+          }
+        ]
+      },
+      {
+        "titulo": "Glossário Visual de Símbolos",
+        "tipo": "glossario",
+        "descricao": "Convenções gráficas deste procedimento.",
+        "conteudo": [
+          {
+            "colunas": [
+              "Símbolo",
+              "Significado"
+            ],
+            "linhas": [
+              [
+                "⚠  Passo Crítico",
+                "Etapa em que o erro pode causar dano grave ao paciente."
+              ],
+              [
+                "Risco",
+                "Falha potencial mapeada com a barreira correspondente."
+              ],
+              [
+                "Barreira",
+                "Controle que impede que o risco aconteça."
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "historico_revisoes": [
+      {
+        "versao": "01",
+        "data": "10/2026",
+        "descricao": "Elaboração inicial",
+        "responsavel": "Enfermagem em Radioterapia"
+      }
+    ]
+  }
+}

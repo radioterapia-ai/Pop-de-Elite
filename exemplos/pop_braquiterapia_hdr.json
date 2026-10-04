@@ -1,0 +1,555 @@
+{
+  "metadata": {
+    "titulo_processo": "Braquiterapia Ginecologica de Alta Taxa de Dose com Sonda e Anel",
+    "codigo": "POP-RTB-001",
+    "versao": "01",
+    "setor": "Radioterapia — Braquiterapia",
+    "natureza_processo": "misto",
+    "data_elaboracao": "08/2026",
+    "data_revisao": "",
+    "validade": "08/2029",
+    "elaborado_por": {
+      "nome": "Especialista em Fisica Medica",
+      "cargo": "Fisico Medico Responsavel Tecnico"
+    },
+    "validado_por": {
+      "nome": "",
+      "cargo": ""
+    },
+    "aprovado_por": {
+      "nome": "",
+      "cargo": ""
+    }
+  },
+  "secoes": {
+    "objetivo": "Padronizar a braquiterapia ginecologica de alta taxa de dose com fonte de Iridio-192 e aplicador sonda e anel, sob anestesia, da avaliacao pre-anestesica a retirada do aplicador. O procedimento protege a paciente de tres danos distintos: erro de dose por deslocamento do aplicador entre a imagem e a irradiacao, exposicao indevida por fonte nao recolhida ao fim da fracao, e lesao de orgao adjacente por perfuracao uterina ou por dose excessiva em reto e bexiga. Contempla a identificacao segura antes da inducao anestesica (Meta 1), uma vez que a paciente anestesiada nao confirma a propria identidade, e a comunicacao efetiva entre as equipes de anestesia, radioterapia e fisica medica (Meta 2).",
+    "campo_aplicacao": "Abrangencia do Servico de Radioterapia: sala de braquiterapia blindada, sala de tomografia utilizada para aquisicao de imagem do aplicador, sala de recuperacao pos-anestesica e sala de planejamento da fisica medica. Envolve Medicina (radio-oncologia e anestesiologia), Fisica Medica, Enfermagem, Tecnicos em Radioterapia e Supervisao de Radioprotecao. Nao se aplica a braquiterapia de baixa taxa de dose nem a implantes permanentes.",
+    "conceitos": [
+      {
+        "termo": "Braquiterapia de alta taxa de dose (HDR)",
+        "definicao": "Irradiacao com fonte selada de alta atividade posicionada temporariamente no interior ou junto ao volume alvo, com taxa de dose superior a 12 Gy por hora, entregue por equipamento de carregamento remoto."
+      },
+      {
+        "termo": "Afterloader",
+        "definicao": "Equipamento de carregamento remoto que conduz a fonte de Iridio-192 do cofre ate as posicoes programadas no aplicador, por cabo motorizado, e a recolhe ao termino do tempo calculado."
+      },
+      {
+        "termo": "Aplicador sonda e anel",
+        "definicao": "Conjunto composto por sonda intrauterina e anel vaginal solidarios, que fixa a geometria entre o canal uterino e o fundo de saco vaginal, permitindo distribuicao de dose reprodutivel entre fracoes."
+      },
+      {
+        "termo": "HR-CTV",
+        "definicao": "Volume alvo clinico de alto risco, definido em imagem no momento de cada fracao, correspondente ao colo uterino e a doenca residual visivel."
+      },
+      {
+        "termo": "D90 do HR-CTV",
+        "definicao": "Dose que cobre noventa por cento do volume alvo de alto risco; parametro de cobertura usado na aceitacao do plano."
+      },
+      {
+        "termo": "D2cc",
+        "definicao": "Dose recebida pelos dois centimetros cubicos mais irradiados de um orgao de risco; parametro usado para limitar dose em reto, bexiga e sigmoide."
+      },
+      {
+        "termo": "Decaimento do Iridio-192",
+        "definicao": "Reducao da atividade da fonte com meia-vida aproximada de 74 dias, que exige recalculo do tempo de irradiacao a cada fracao para manter a dose prescrita."
+      },
+      {
+        "termo": "Fonte retida",
+        "definicao": "Situacao de emergencia em que a fonte nao retorna ao cofre blindado ao termino da irradiacao, mantendo exposicao continuada da paciente e impedindo a entrada segura da equipe."
+      },
+      {
+        "termo": "Levantamento radiometrico",
+        "definicao": "Medida da taxa de dose no ambiente e junto a paciente com detector independente do sistema do equipamento, destinada a confirmar o recolhimento efetivo da fonte."
+      },
+      {
+        "termo": "Liberacao para uso clinico",
+        "definicao": "Ato formal, privativo do Fisico Medico Responsavel Tecnico, que atesta que o equipamento e o plano atendem aos criterios de aceite e autoriza a irradiacao."
+      }
+    ],
+    "responsabilidades": [
+      {
+        "papel": "Medico Radio-oncologista",
+        "acoes": "Indicar o tratamento, realizar a insercao da sonda e do anel, definir o volume alvo na imagem, aprovar o plano quanto a cobertura e as restricoes de dose e conduzir a retirada do aplicador. Responde pela decisao clinica; nao libera equipamento."
+      },
+      {
+        "papel": "Medico Anestesiologista",
+        "acoes": "Realizar a avaliacao pre-anestesica, conduzir a anestesia durante a insercao e a retirada, e liberar a paciente da recuperacao pos-anestesica. Responde pela via aerea e pela estabilidade hemodinamica durante todo o periodo em que a paciente permanece anestesiada."
+      },
+      {
+        "papel": "Fisico Medico Responsavel Tecnico",
+        "acoes": "Conferir o teste diario do afterloader, aplicar a correcao de decaimento da fonte, elaborar e verificar o plano, confirmar a ausencia de deslocamento do aplicador, executar o levantamento radiometrico e assinar a liberacao para irradiacao. E o unico papel autorizado a declarar o conjunto apto."
+      },
+      {
+        "papel": "Fisico Medico verificador",
+        "acoes": "Executar a dupla checagem independente do plano antes da irradiacao, sem acesso aos parametros do planejador original, conferindo tempo por posicao, atividade corrigida e restricoes de dose."
+      },
+      {
+        "papel": "Enfermeiro",
+        "acoes": "Confirmar jejum e consentimento, conferir a identificacao com dois identificadores antes da inducao, preparar o material esteril, auxiliar o posicionamento e o tamponamento, e monitorar a paciente na recuperacao pos-anestesica."
+      },
+      {
+        "papel": "Tecnico em Radioterapia",
+        "acoes": "Preparar a sala e o afterloader, transportar a paciente para a aquisicao de imagem e de volta, conectar os cateteres conferindo comprimento e canal, e operar o console sob supervisao da fisica medica."
+      },
+      {
+        "papel": "Supervisor de Radioprotecao",
+        "acoes": "Verificar a integridade dos intertravamentos, do monitor de area e da sinalizacao antes da primeira fracao do dia, e conduzir a resposta a emergencia radiologica, incluindo a comunicacao a autoridade reguladora."
+      }
+    ],
+    "recursos": [
+      "Equipamento de carregamento remoto (afterloader) com fonte de Iridio-192 e certificado de calibracao vigente",
+      "Conjunto aplicador sonda e anel, esterilizado, com cateteres de transferencia identificados por canal e comprimento",
+      "Contentor blindado de emergencia posicionado dentro da sala, com pinca longa de cabo extenso",
+      "Detector Geiger-Muller ou equivalente, independente do sistema do equipamento, com calibracao vigente",
+      "Monitor de area com indicacao visual e sonora, e sinalizacao luminosa de irradiacao na porta",
+      "Sistema de intertravamento de porta e botao de interrupcao de emergencia no console e na sala",
+      "Dosimetro individual de leitura direta para cada profissional que entra na sala controlada",
+      "Tomografo computadorizado com protocolo de aquisicao para aplicador metalico e reducao de artefato",
+      "Sistema de planejamento de braquiterapia com formalismo TG-43 e biblioteca do aplicador em uso",
+      "Sistema de gestao e prontuario eletronico TASY e sistema de record and verify da radioterapia",
+      "Material de anestesia, monitorizacao multiparametrica e carro de emergencia",
+      "Material esteril: histerometro, dilatadores, especulo, sonda vesical, gaze para tamponamento e campos",
+      "Equipamento de protecao individual conforme a NR-32 e avental plumbifero para situacao de emergencia"
+    ],
+    "procedimento": {
+      "acoes_iniciais": [
+        "Confirmar jejum, avaliacao pre-anestesica vigente e consentimento informado assinado, registrando a conferencia no TASY.",
+        "Higienizar as maos antes do contato com a paciente e antes de manusear o aplicador esteril (Meta 5).",
+        {
+          "texto": "Confirmar a identificacao da paciente com dois identificadores, nome completo e data de nascimento, perguntando ativamente a ela ANTES da inducao anestesica (Meta 1). Sob anestesia a paciente nao confirma a propria identidade, e a identificacao deixa de ser verificavel — por isso esta barreira nao pode ser deslocada para depois.",
+          "prioridade": "critica"
+        },
+        "Executar o time-out multiprofissional com medico, anestesiologista, enfermeiro, fisico medico e tecnico, confirmando em voz alta paciente, procedimento, numero da fracao, dose prescrita e aplicador previsto (Meta 4).",
+        "Conferir a prescricao no TASY quanto a dose por fracao, numero total de fracoes e ponto ou volume de prescricao, contra o registro do medico assistente.",
+        "Verificar o teste diario do afterloader e a atividade da fonte corrigida pelo decaimento do Iridio-192 na data — sem a correcao, o tempo calculado entrega dose diferente da prescrita.",
+        "Confirmar a presenca dentro da sala do contentor de emergencia, da pinca longa e do detector independente, e a operacao do monitor de area e da sinalizacao luminosa.",
+        "Registrar a entrada de cada profissional na area controlada e conferir o uso do dosimetro individual."
+      ],
+      "execucao_tecnica": [
+        "Posicionar a paciente em litotomia apos a inducao anestesica, com protecao de pontos de apoio e monitorizacao multiparametrica continua conduzida pela anestesiologia.",
+        "Realizar antissepsia da regiao vulvar e vaginal e sondagem vesical de demora, mantendo o balao insuflado como referencia anatomica na imagem.",
+        {
+          "texto": "Realizar a histerometria com tecnica delicada e sob visao direta. A perfuracao uterina e a complicacao mecanica mais frequente da insercao e pode passar despercebida sob anestesia, quando a paciente nao refere dor — a suspeita se confirma por trajeto anomalo na imagem, e nao pela clinica.",
+          "prioridade": "critica"
+        },
+        "Introduzir a sonda intrauterina ate a profundidade medida, acoplar o anel de diametro adequado ao fundo de saco vaginal e solidarizar o conjunto conforme o sistema de fixacao do aplicador.",
+        "Realizar o tamponamento vaginal com gaze, afastando parede anterior e posterior — o tamponamento aumenta a distancia entre a fonte e a mucosa do reto e da bexiga, e e o que reduz a dose nesses orgaos.",
+        "Fixar o conjunto a paciente e registrar a profundidade da sonda e o diametro do anel utilizados, para conferencia entre fracoes.",
+        {
+          "diagrama": {
+            "tipo": "processo",
+            "titulo": "Cadeia da insercao ate a liberacao para irradiar",
+            "conteudo": [
+              {
+                "texto": "Insercao do aplicador",
+                "forma": "elipse"
+              },
+              {
+                "texto": "Aquisicao de imagem",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Contorno e planejamento",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Dupla checagem",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Liberacao assinada",
+                "forma": "elipse"
+              }
+            ]
+          }
+        },
+        "Transportar a paciente para a tomografia sem mobilizar o aplicador, com a equipe de anestesia acompanhando, e adquirir o estudo com protocolo de reducao de artefato metalico.",
+        "Delimitar o HR-CTV e os orgaos de risco — bexiga, reto e sigmoide — na imagem daquela fracao. O contorno e refeito a cada fracao porque a anatomia e a posicao do aplicador variam entre elas.",
+        "Reconstruir o aplicador pela biblioteca correspondente ao modelo em uso e conferir a correspondencia entre canal fisico e canal do plano.",
+        "Otimizar a distribuicao de dose e verificar os parametros de aceite: cobertura do HR-CTV pelo D90 conforme a prescricao, e D2cc de reto, bexiga e sigmoide dentro das restricoes adotadas pelo servico — estes limites protegem a paciente de fistula, sangramento tardio e estenose.",
+        {
+          "texto": "Submeter o plano a dupla checagem independente por segundo fisico medico, conferindo tempo por posicao de parada, atividade corrigida na data, canal utilizado e restricoes atendidas. A checagem independente e a barreira que impede que um erro de digitacao no tempo entregue dose varias vezes maior que a prescrita.",
+          "prioridade": "critica"
+        },
+        "Confirmar por imagem ou por conferencia da fixacao que o aplicador NAO se deslocou entre a aquisicao e a irradiacao. Deslocamento nesse intervalo desloca toda a distribuicao de dose calculada, e e o erro mais dificil de detectar depois.",
+        "Conectar os cateteres de transferencia conferindo comprimento e canal um a um, contra o plano aprovado.",
+        "Retirar toda a equipe da sala, fechar a porta, confirmar o acionamento do intertravamento e a sinalizacao luminosa, e manter a paciente sob observacao continua por video e audio durante toda a irradiacao.",
+        {
+          "texto": "Ao termino do tempo programado, confirmar o recolhimento da fonte por DOIS meios independentes: a indicacao do console e o detector de radiacao portatil na entrada da sala. Nunca entrar na sala com base apenas na indicacao do equipamento.",
+          "prioridade": "critica"
+        },
+        "Realizar levantamento radiometrico junto a paciente e no aplicador antes de qualquer manipulacao, registrando a leitura obtida."
+      ],
+      "acoes_finais": [
+        "Desconectar os cateteres de transferencia, retirar o tamponamento e remover o aplicador conforme a tecnica, com a paciente ainda sob anestesia.",
+        "Repetir a leitura com o detector independente na paciente, no aplicador retirado e no material descartado, confirmando ausencia de fonte deslocada.",
+        "Encaminhar a paciente a recuperacao pos-anestesica, com alta da sala autorizada pelo anestesiologista mediante criterios objetivos de recuperacao.",
+        "Encaminhar o aplicador ao processamento conforme a rotina de esterilizacao do servico, conferindo integridade e numero de identificacao.",
+        "Registrar no TASY a fracao realizada, a dose entregue, os parametros do aplicador, as leituras radiometricas e eventuais intercorrencias; registrar o plano no sistema de record and verify.",
+        "Descartar gaze, sonda e material contaminado conforme o PGRSS, no grupo aplicavel, e reestabelecer a sala para a fracao seguinte.",
+        "Confirmar o agendamento da proxima fracao e comunicar a paciente e o acompanhante as orientacoes de intervalo e sinais de alerta."
+      ]
+    },
+    "riscos": {
+      "assistenciais": [
+        {
+          "risco": "[Risco Critico] Fonte nao recolhida ao cofre ao termino da irradiacao, mantendo exposicao continuada da paciente e impedindo a entrada segura da equipe.",
+          "barreira": "Confirmacao do recolhimento por dois meios independentes — console e detector portatil — antes de qualquer entrada. Contentor blindado e pinca longa permanentemente dentro da sala."
+        },
+        {
+          "risco": "[Risco Critico] Deslocamento do aplicador entre a aquisicao da imagem e a irradiacao, deslocando toda a distribuicao de dose calculada sem sinal clinico imediato.",
+          "barreira": "Fixacao do conjunto a paciente, transporte sem mobilizacao e conferencia obrigatoria da posicao imediatamente antes de conectar os cateteres."
+        },
+        {
+          "risco": "[Risco Critico] Erro de tempo por atividade nao corrigida pelo decaimento ou por digitacao, entregando dose divergente da prescrita.",
+          "barreira": "Dupla checagem independente por segundo fisico medico, sem acesso aos parametros do planejador original, com conferencia de tempo por posicao e atividade na data."
+        },
+        {
+          "risco": "[Risco Critico] Perfuracao uterina durante a histerometria ou a insercao, nao percebida por estar a paciente anestesiada.",
+          "barreira": "Tecnica sob visao direta, histerometria delicada e conferencia do trajeto da sonda na imagem antes do planejamento."
+        },
+        {
+          "risco": "[Risco Critico] Troca de plano entre pacientes no sistema de planejamento ou no console.",
+          "barreira": "Identificacao com dois identificadores antes da inducao, time-out com confirmacao do numero da fracao, e conferencia do nome da paciente no console antes de iniciar."
+        },
+        {
+          "risco": "[Risco Moderado] Dose excessiva em reto, bexiga ou sigmoide, com toxicidade tardia sob a forma de sangramento, fistula ou estenose.",
+          "barreira": "Tamponamento adequado afastando as paredes, contorno dos orgaos de risco a cada fracao e verificacao das restricoes de D2cc antes da liberacao."
+        },
+        {
+          "risco": "[Risco Moderado] Evento anestesico em sala afastada do centro cirurgico.",
+          "barreira": "Avaliacao pre-anestesica previa, monitorizacao multiparametrica continua, carro de emergencia na sala e criterios objetivos de alta da recuperacao."
+        },
+        {
+          "risco": "[Risco Moderado] Exposicao ocupacional acima do previsto durante manipulacao ou emergencia.",
+          "barreira": "Dosimetria individual, registro de entrada na area controlada e treinamento periodico em resposta a fonte retida."
+        }
+      ],
+      "contingencia": [
+        "**Fonte retida — nao recolhe pelo console**: acionar a interrupcao de emergencia → tentar o recolhimento manual pela manivela do afterloader → se persistir, entrar com avental plumbifero e detector, retirar o aplicador com a pinca longa e depositar no contentor blindado dentro da sala → retirar a paciente da sala → isolar o ambiente e sinalizar → acionar o Supervisor de Radioprotecao → comunicar imediatamente a autoridade reguladora, conforme a Norma ANSN 6.10 → registrar como evento e abrir analise de causa raiz.",
+        "**Falha de energia durante a irradiacao**: o afterloader recolhe a fonte por acionamento mecanico proprio → confirmar o recolhimento com o detector independente antes de entrar → nao tentar religar o equipamento manualmente → acionar a manutencao predial e a fisica medica → reiniciar a sequencia de verificacao do inicio apos restabelecimento.",
+        "**Suspeita de perfuracao uterina**: interromper a progressao do instrumento → confirmar o trajeto por imagem → suspender a fracao se confirmada → comunicar o medico assistente e a paciente apos a recuperacao anestesica → reavaliar a conduta e reagendar → notificar como intercorrencia no TASY.",
+        "**Deslocamento do aplicador detectado antes de irradiar**: nao irradiar → reposicionar o aplicador → repetir a aquisicao de imagem e o planejamento com o novo posicionamento → submeter a nova dupla checagem → so entao liberar.",
+        "**Divergencia entre a dupla checagem e o plano original**: bloquear a liberacao → reconciliar os dois calculos na presenca dos dois fisicos → se a divergencia persistir, refazer o planejamento do zero → registrar a ocorrencia como quase-erro para analise do servico."
+      ]
+    },
+    "registros": [
+      "Prontuario eletronico TASY — consentimento, avaliacao pre-anestesica, fracao realizada e intercorrencias",
+      "Sistema de record and verify da radioterapia — plano aprovado e dose entregue por fracao",
+      "Planilha de constancia e de testes diarios do afterloader, da Fisica Medica",
+      "Formulario de liberacao para irradiacao, assinado pelo Fisico Medico Responsavel Tecnico",
+      "Registro das leituras do levantamento radiometrico por fracao",
+      "Livro de controle de acesso a area controlada e registros de dosimetria individual",
+      "Ficha de controle e inventario da fonte de Iridio-192"
+    ],
+    "indicadores": [
+      {
+        "nome": "Percentual de fracoes com confirmacao documentada de recolhimento da fonte por dois meios [Fonte: Registro de levantamento radiometrico / Fisica Medica]",
+        "meta": "100%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Percentual de planos submetidos a dupla checagem independente antes da irradiacao [Fonte: Formulario de liberacao / Fisica Medica]",
+        "meta": "100%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Percentual de fracoes com restricoes de D2cc de reto e bexiga atendidas [Fonte: Sistema de planejamento / relatorio da Fisica Medica]",
+        "meta": ">= 95%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Taxa de adesao ao time-out multiprofissional na braquiterapia [Fonte: Auditoria da Qualidade / TASY]",
+        "meta": "100%",
+        "periodicidade": "Trimestral"
+      },
+      {
+        "nome": "Taxa de intercorrencias por fracao realizada, incluindo deslocamento de aplicador e perfuracao [Fonte: Notificacao de intercorrencia no TASY / BI Qualidade]",
+        "meta": "< 2%",
+        "periodicidade": "Trimestral"
+      },
+      {
+        "nome": "Percentual de profissionais do setor com treinamento vigente em resposta a fonte retida [Fonte: Educacao Continuada / TASY]",
+        "meta": "100%",
+        "periodicidade": "Semestral"
+      }
+    ],
+    "referencias": [
+      "CNEN NN-6.10 — Requisitos de seguranca e protecao radiologica para servicos de radioterapia.",
+      "Norma CNEN NN-3.01 — Diretrizes basicas de protecao radiologica.",
+      "ANVISA. Resolucao RDC no 611, de 9 de marco de 2022 — requisitos sanitarios para servicos de radiodiagnostico e radioterapia.",
+      "Nath R, Anderson LL, Luxton G, et al. Dosimetry of interstitial brachytherapy sources: AAPM Task Group No. 43. Med Phys. 1995 e atualizacao TG-43U1.",
+      "Nath R, Anderson LL, Meli JA, et al. Code of practice for brachytherapy physics: AAPM Task Group No. 56. Med Phys. 1997;24(10):1557-98.",
+      "Kubo HD, Glasgow GP, Pethel TD, et al. High dose-rate brachytherapy treatment delivery: AAPM Task Group No. 59. Med Phys. 1998;25(4):375-403.",
+      "ICRP Publication 97. Prevention of high-dose-rate brachytherapy accidents. Ann ICRP. 2005;35(2).",
+      "ICRP Publication 105. Radiological protection in medicine. Ann ICRP. 2007;37(6).",
+      "IAEA. Safety Standards Series SSG-46 — Radiation protection and safety in medical uses of ionizing radiation.",
+      "Ministerio do Trabalho. NR-32 — Seguranca e saude no trabalho em servicos de saude.",
+      "ANVISA. Resolucao RDC no 36, de 25 de julho de 2013 — acoes para a seguranca do paciente em servicos de saude."
+    ],
+    "anexos": [
+      {
+        "titulo": "Checklist de Verificacao por Fracao",
+        "tipo": "checklist",
+        "descricao": "Aplicado a cada fracao, da recepcao a retirada do aplicador. Item nao conforme impede a progressao para a etapa seguinte.",
+        "conteudo": [
+          "Jejum, avaliacao pre-anestesica e consentimento conferidos no TASY",
+          "Identificacao com dois identificadores confirmada ANTES da inducao",
+          "Time-out multiprofissional executado em voz alta",
+          "Teste diario do afterloader conferido",
+          "Atividade da fonte corrigida pelo decaimento na data",
+          "Contentor de emergencia, pinca longa e detector presentes na sala",
+          "Monitor de area, sinalizacao e intertravamento operantes",
+          "Profundidade da sonda e diametro do anel registrados",
+          "Tamponamento realizado afastando reto e bexiga",
+          "Contorno de HR-CTV e orgaos de risco refeito nesta fracao",
+          "Restricoes de D2cc verificadas e atendidas",
+          "Dupla checagem independente concluida e assinada",
+          "Ausencia de deslocamento do aplicador confirmada antes de conectar",
+          "Cateteres conferidos por canal e comprimento",
+          "Recolhimento da fonte confirmado por console E por detector",
+          "Levantamento radiometrico realizado e registrado"
+        ]
+      },
+      {
+        "titulo": "Parametros Tecnicos e o Risco que Cada Um Controla",
+        "tipo": "tabela",
+        "descricao": "Traducao dos parametros de fisica medica para o risco assistencial correspondente. Coluna da direita destinada a leitura por auditor nao especialista.",
+        "colunas": [
+          "Parametro verificado",
+          "Criterio",
+          "Risco a paciente que controla"
+        ],
+        "linhas": [
+          [
+            "Atividade corrigida pelo decaimento",
+            "Recalculada na data da fracao",
+            "Dose entregue divergente da prescrita"
+          ],
+          [
+            "Dupla checagem independente do plano",
+            "100% dos planos, por segundo fisico",
+            "Erro de digitacao multiplicando a dose"
+          ],
+          [
+            "Cobertura do HR-CTV (D90)",
+            "Conforme prescricao do servico",
+            "Subdose no alvo e perda de controle local"
+          ],
+          [
+            "D2cc de reto e bexiga",
+            "Dentro da restricao adotada",
+            "Fistula, sangramento tardio e estenose"
+          ],
+          [
+            "Posicao do aplicador antes de irradiar",
+            "Sem deslocamento desde a imagem",
+            "Distribuicao de dose inteira deslocada"
+          ],
+          [
+            "Recolhimento da fonte",
+            "Console E detector independente",
+            "Exposicao continuada da paciente e da equipe"
+          ],
+          [
+            "Levantamento radiometrico pos-fracao",
+            "Realizado e registrado",
+            "Fonte deslocada nao detectada"
+          ]
+        ]
+      },
+      {
+        "titulo": "Fluxo de Resposta a Fonte Retida",
+        "tipo": "fluxograma",
+        "descricao": "Caminho de decisao para a emergencia radiologica que estrutura todo o plano de contingencia. Deve estar afixado na sala de comando.",
+        "conteudo": [
+          {
+            "id": "i",
+            "tipo": "inicio",
+            "texto": "Fim do tempo programado",
+            "raia": "Fisico Medico Responsavel Tecnico"
+          },
+          {
+            "id": "d1",
+            "tipo": "decisao",
+            "texto": "Fonte recolheu?",
+            "raia": "Fisico Medico Responsavel Tecnico",
+            "sim": "t1",
+            "nao": "t2"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "texto": "Confirmar com detector e prosseguir",
+            "raia": "Fisico Medico Responsavel Tecnico",
+            "proximo": "f1"
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "texto": "Acionar interrupcao de emergencia",
+            "raia": "Fisico Medico Responsavel Tecnico",
+            "critico": true
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "texto": "Recolhimento manual pela manivela",
+            "raia": "Fisico Medico Responsavel Tecnico",
+            "critico": true
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "texto": "Retirar aplicador com pinca e blindar",
+            "raia": "Medico Radio-oncologista",
+            "critico": true
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "texto": "Isolar sala e acionar radioprotecao",
+            "raia": "Supervisor de Radioprotecao",
+            "proximo": "f2"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "texto": "Procedimento concluido"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "texto": "Emergencia controlada e registrada"
+          }
+        ],
+        "raias": [
+          "Fisico Medico Responsavel Tecnico",
+          "Medico Radio-oncologista",
+          "Supervisor de Radioprotecao"
+        ]
+      },
+      {
+        "titulo": "Ciclo de Melhoria da Braquiterapia",
+        "tipo": "ciclo",
+        "descricao": "Ciclo aplicado pelo servico sobre os indicadores deste procedimento, conforme exigido para gestao integrada.",
+        "conteudo": [
+          "Planejar: definir meta por indicador",
+          "Executar: registrar cada fracao",
+          "Verificar: analise critica mensal",
+          "Agir: plano de acao 5W2H"
+        ]
+      },
+      {
+        "titulo": "Formulario de Liberacao para Irradiacao",
+        "tipo": "misto",
+        "descricao": "Registro de qualidade preenchido a cada fracao. A assinatura do Fisico Medico Responsavel Tecnico e o ato que autoriza a irradiacao.",
+        "conteudo": [
+          {
+            "tipo": "texto",
+            "titulo": "Instrucoes",
+            "conteudo": "Preencher imediatamente antes de conectar os cateteres. Sem a assinatura do Fisico Medico Responsavel Tecnico a irradiacao nao e autorizada. Arquivar junto ao registro da fracao."
+          },
+          {
+            "tipo": "tabela",
+            "titulo": "Dados da Fracao",
+            "colunas": [
+              "Campo",
+              "Valor"
+            ],
+            "linhas": [
+              [
+                "Data / hora",
+                "___/___/___  ___:___"
+              ],
+              [
+                "Paciente (nome + DN)",
+                "________________________"
+              ],
+              [
+                "Fracao numero",
+                "____ de ____"
+              ],
+              [
+                "Atividade da fonte na data",
+                "__________ Ci"
+              ],
+              [
+                "Profundidade da sonda",
+                "________ cm"
+              ],
+              [
+                "Diametro do anel",
+                "________ mm"
+              ],
+              [
+                "Fisico planejador",
+                "________________________"
+              ],
+              [
+                "Fisico verificador",
+                "________________________"
+              ]
+            ]
+          },
+          {
+            "tipo": "checklist",
+            "titulo": "Confirmacoes Obrigatorias",
+            "itens": [
+              "Dupla checagem independente concluida",
+              "Restricoes de D2cc atendidas",
+              "Ausencia de deslocamento do aplicador",
+              "Cateteres conferidos por canal e comprimento",
+              "Contentor de emergencia e detector na sala"
+            ]
+          },
+          {
+            "tipo": "processo",
+            "titulo": "Apos a Irradiacao",
+            "etapas": [
+              "Confirmar recolhimento",
+              "Levantamento radiometrico",
+              "Retirar aplicador",
+              "Registrar no TASY"
+            ]
+          }
+        ]
+      },
+      {
+        "titulo": "Glossario Visual de Simbolos",
+        "tipo": "glossario",
+        "descricao": "Convencoes graficas utilizadas neste procedimento.",
+        "conteudo": [
+          {
+            "colunas": [
+              "Simbolo",
+              "Significado"
+            ],
+            "linhas": [
+              [
+                "⚠  Passo Critico",
+                "Etapa onde o erro causa dano grave ou exposicao indevida."
+              ],
+              [
+                "Risco",
+                "Falha potencial mapeada, com barreira correspondente."
+              ],
+              [
+                "Barreira",
+                "Controle que impede a materializacao do risco."
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "historico_revisoes": [
+      {
+        "versao": "01",
+        "data": "08/2026",
+        "descricao": "Elaboracao inicial",
+        "responsavel": "Fisica Medica"
+      }
+    ]
+  }
+}

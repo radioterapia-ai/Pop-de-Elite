@@ -1,0 +1,382 @@
+{
+  "metadata": {
+    "titulo_processo": "Manutenção Preventiva Mensal do Acelerador Linear",
+    "codigo": "POP-RTX-014",
+    "versao": "01",
+    "setor": "Radioterapia — Física Médica e Engenharia Clínica",
+    "natureza_processo": "radiotecnico",
+    "data_elaboracao": "08/2026",
+    "data_revisao": "",
+    "validade": "08/2029",
+    "elaborado_por": {
+      "nome": "Especialista em Física Médica",
+      "cargo": "Físico Médico Responsável Técnico"
+    },
+    "validado_por": {
+      "nome": "",
+      "cargo": ""
+    },
+    "aprovado_por": {
+      "nome": "",
+      "cargo": ""
+    }
+  },
+  "secoes": {
+    "objetivo": "Padronizar a manutenção preventiva mensal do acelerador linear, assegurando a constância dosimétrica e mecânica dentro dos limites de tolerância da TG-142, a integridade dos sistemas de segurança radiológica e a rastreabilidade da liberação do equipamento para uso clínico. O procedimento e de natureza técnico-operacional executado com a sala vazia de pacientes, sob regime de bloqueio e etiquetagem de energia.",
+    "campo_aplicacao": "Abrangência restrita ao Serviço de Radioterapia: bunker do acelerador, sala de comando, casa de maquinas e almoxarifado de física médica. Não há paciente presente em nenhuma etapa. Aplica-se a Física Médica, Engenharia Clínica, Supervisão de Radioproteção e Manutenção Predial.",
+    "conceitos": [
+      {
+        "termo": "LOTO (Lockout/Tagout)",
+        "definicao": "Bloqueio e etiquetagem das fontes de energia (elétrica, pneumática, hidráulica) por cadeado individual, impedindo energização inadvertida durante a intervenção."
+      },
+      {
+        "termo": "Constância dosimétrica",
+        "definicao": "Verificação de que a dose de referência entregue permanece dentro de +/- 2% do valor de calibração, conforme TG-142 da AAPM."
+      },
+      {
+        "termo": "Intertravamento (interlock)",
+        "definicao": "Dispositivo que impede a emissão de radiação quando uma condição de segurança não é satisfeita (porta aberta, botão de emergência acionado, chave removida)."
+      },
+      {
+        "termo": "Área controlada",
+        "definicao": "Área sujeita a controle de acesso e monitoração ocupacional, conforme CNEN NN-3.01, delimitada fisicamente pelo bunker."
+      },
+      {
+        "termo": "Liberação para uso clínico",
+        "definicao": "Ato formal, privativo do Físico Médico, que devolve o equipamento a operação assistencial após verificação completa dos critérios de aceite."
+      }
+    ],
+    "responsabilidades": [
+      {
+        "papel": "Físico Médico Responsável Técnico",
+        "acoes": "Conduzir os testes de constância dosimétrica e mecânica, avaliar desvios contra as tolerâncias TG-142 e assinar a liberação para uso clínico. É o único papel autorizado a declarar o equipamento apto."
+      },
+      {
+        "papel": "Engenharia Clínica",
+        "acoes": "Executar a intervenção mecânica e elétrica sob LOTO, registrar peças substituidas e devolver o equipamento energizado apenas após conferência do checklist de reenergização. Não decide sobre liberação clínica."
+      },
+      {
+        "papel": "Supervisor de Radioproteção",
+        "acoes": "Verificar integridade dos intertravamentos, sinalização luminosa, monitor de área e levantamento radiométrico quando houver intervenção em blindagem ou cabecote."
+      },
+      {
+        "papel": "Técnico em Radioterapia",
+        "acoes": "Confirmar o bloqueio da agenda de tratamento no sistema de gestão e reabrir os horários somente após comunicação formal da liberação."
+      },
+      {
+        "papel": "Manutenção Predial",
+        "acoes": "Garantir estabilidade de temperatura, umidade e no-break do bunker durante a janela de manutenção."
+      }
+    ],
+    "recursos": [
+      "Cadeados individuais e etiquetas de LOTO, um por executante",
+      "Camara de ionização cilíndrica calibrada com certificado vigente e eletrometro",
+      "Objeto simulador de água sólida para constância dosimétrica",
+      "Barometro e termometro calibrados para correção de temperatura e pressão",
+      "Detector Geiger-Muller e monitor de área para levantamento radiométrico",
+      "Dosímetro individual de leitura direta para cada executante",
+      "Nível digital e trena laser para verificação de coincidência de isocentro",
+      "Objeto de teste tipo QC-3 ou equivalente para qualidade de imagem portal",
+      "Software de record and verify e planilha de constância do serviço de física",
+      "EPI: luvas isolantes classe 0, calcado de segurança e óculos de proteção",
+      "Kit de ferramentas antiestático e multimetro categoria CAT III",
+      "Chave de comando do acelerador sob controle de acesso registrado"
+    ],
+    "procedimento": {
+      "acoes_iniciais": [
+        "Confirmar o bloqueio da agenda clínica do equipamento no sistema de gestão com no mínimo 48 horas de antecedência, verificando que nenhum paciente está agendado para a janela.",
+        "Identificar o equipamento de forma inequívoca conferindo dois identificadores: número de série do acelerador e identificação da sala, contra a ordem de serviço. Fotografar a placa de identificação quando houver mais de um acelerador no serviço.",
+        {
+          "texto": "Executar o bloqueio e etiquetagem (LOTO) do disjuntor geral do acelerador, com cadeado individual de cada executante. Confirmar ausência de tensão com multimetro antes de qualquer intervenção.",
+          "prioridade": "critica"
+        },
+        "Realizar varredura visual do bunker confirmando ausência de pessoas, acionar a sinalização de manutenção na porta e registrar a entrada de cada executante no controle de acesso da área controlada.",
+        "Conferir a validade do certificado de calibração da camara de ionização e a carga do dosímetro individual de leitura direta de cada executante."
+      ],
+      "execucao_tecnica": [
+        "Registrar temperatura e pressão do bunker no início da sessão e aplicar o fator de correção Ktp nas leituras dosimétricas subsequentes.",
+        "Verificar a coincidência entre campo luminoso e campo de radiação para o campo 10x10 cm, aceitando desvio máximo de 2 mm em cada borda conforme TG-142.",
+        "Aferir a constância dosimétrica em condição de referência (SSD 100 cm, campo 10x10 cm, profundidade de 10 cm), comparando com o valor de calibração. Tolerância de aceite: desvio inferior a 2%.",
+        {
+          "texto": "Testar individualmente cada intertravamento de segurança: porta do bunker, botões de emergência da sala e do comando, chave de habilitação e monitor de área. Qualquer intertravamento que não interrompa a emissão reprova o equipamento e impede a liberação clínica.",
+          "prioridade": "critica"
+        },
+        "Verificar a coincidência do isocentro mecânico e radiológico nos três eixos (gantry, colimador e mesa), com tolerância de 1 mm de raio para o isocentro radiológico.",
+        {
+          "diagrama": {
+            "tipo": "processo",
+            "titulo": "Cadeia de verificação antes da reenergização",
+            "conteudo": [
+              {
+                "texto": "Intervenção concluída",
+                "forma": "elipse"
+              },
+              {
+                "texto": "Ferramentas retiradas",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Bunker vazio",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "LOTO removido",
+                "forma": "retangulo"
+              },
+              {
+                "texto": "Equipamento energizado",
+                "forma": "elipse"
+              }
+            ]
+          }
+        },
+        "Executar o teste de qualidade de imagem do sistema portal com objeto de teste padrão, avaliando resolução espacial e contraste contra a linha de base do serviço.",
+        "Conferir a exatidão do posicionamento da mesa nos três eixos e a leitura do telemetro, com tolerância de 2 mm.",
+        "Verificar o sistema de dosimetria dual do acelerador, confirmando que ambas as camaras monitoras interrompem o feixe de forma independente ao atingir a unidade monitor programada.",
+        "Realizar levantamento radiométrico das barreiras primária e secundária sempre que a intervenção envolver cabecote, colimador ou blindagem."
+      ],
+      "acoes_finais": [
+        "Recolher todas as ferramentas do bunker e conferir contra a lista de saída, prevenindo objeto esquecido no caminho do feixe ou na trajetória do gantry.",
+        "Remover o LOTO na ordem inversa da aplicação, cada executante retirando o próprio cadeado, e reenergizar o equipamento.",
+        "Executar a rotina de aquecimento (warm-up) do acelerador e repetir a verificação de constância dosimétrica pós-reenergização.",
+        {
+          "texto": "Registrar a liberação para uso clínico com assinatura do Físico Médico Responsável Técnico, contendo data, hora e a declaração de que todos os critérios de aceite foram atendidos. Sem esse registro a agenda permanece bloqueada.",
+          "prioridade": "critica"
+        },
+        "Comunicar formalmente a equipe de técnicos em radioterapia e a coordenação para reabertura da agenda.",
+        "Destinar resíduos de manutenção (óleo, componentes eletrônicos, embalagens) conforme o PGRSS, no grupo D ou E aplicável, e arquivar as planilhas de constância no dossiê do equipamento."
+      ]
+    },
+    "riscos": {
+      "assistenciais": [
+        {
+          "risco": "[Risco Crítico] Liberação do equipamento para tratamento com desvio dosimétrico acima de 2%, expondo a coorte de pacientes subsequente a dose incorreta de forma sistemática.",
+          "barreira": "Critério de aceite objetivo em planilha com trava: desvio acima de 2% bloqueia o campo de liberação. Assinatura privativa do Físico Médico Responsável Técnico."
+        },
+        {
+          "risco": "[Risco Crítico] Energização inadvertida do acelerador com executante dentro do bunker, resultando em choque elétrico ou exposição acidental.",
+          "barreira": "LOTO com cadeado individual por executante e confirmação de ausência de tensão por multimetro antes de qualquer contato."
+        },
+        {
+          "risco": "[Risco Crítico] Intertravamento de porta inoperante não detectado, permitindo emissão de feixe com acesso franqueado ao bunker.",
+          "barreira": "Teste individual e documentado de cada intertravamento a cada manutenção, com reprovação automática do equipamento em caso de falha."
+        },
+        {
+          "risco": "[Risco Moderado] Objeto ou ferramenta esquecido no bunker, colidindo com o gantry ou atenuando o feixe.",
+          "barreira": "Conferência da lista de saída de ferramentas e inspeção visual do bunker por segundo executante antes da reenergização."
+        },
+        {
+          "risco": "[Risco Moderado] Perda da rastreabilidade da intervenção por registro incompleto no dossiê do equipamento.",
+          "barreira": "Formulário padronizado de manutenção com campos obrigatórios e conferência pela Engenharia Clínica no fechamento da ordem de serviço."
+        }
+      ],
+      "contingencia": [
+        "**Desvio dosimétrico acima da tolerância**: reprovar a liberação → manter a agenda bloqueada → acionar o fabricante e a Supervisão de Radioproteção → reagendar pacientes em equipamento alternativo ou remarcar → registrar como não conformidade no sistema da qualidade.",
+        "**Falha de intertravamento**: interromper a manutenção → sinalizar o equipamento como inoperante → comunicar imediatamente o Supervisor de Radioproteção → só reabrir após correção e reteste documentado.",
+        "**Queda de energia durante a intervenção**: manter o LOTO aplicado → não tentar religar manualmente → acionar a Manutenção Predial e conferir o no-break → reiniciar a sequência de verificação do zero após restabelecimento.",
+        "**Peca crítica indisponível em estoque**: manter equipamento inoperante → acionar compras em caráter de urgência → remanejar a fila de tratamento conforme critério de prioridade clínica definido pela coordenação médica."
+      ]
+    },
+    "registros": [
+      "Ordem de serviço de manutenção no sistema de gestão de ativos",
+      "Planilha de constância dosimétrica e mecânica do serviço de física médica",
+      "Formulário de liberação para uso clínico assinado pelo Físico Médico",
+      "Livro de controle de acesso a área controlada",
+      "Dossiê do equipamento (histórico de intervenções e peças)"
+    ],
+    "indicadores": [
+      {
+        "nome": "Taxa de cumprimento do cronograma de manutenção preventiva [Fonte: Sistema de gestão de ativos]",
+        "meta": ">= 95%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Percentual de sessões com desvio dosimétrico dentro de 2% [Fonte: Planilha de constância da Física Médica]",
+        "meta": "100%",
+        "periodicidade": "Mensal"
+      },
+      {
+        "nome": "Tempo de indisponibilidade não programada do acelerador [Fonte: Ordem de serviço / BI Qualidade]",
+        "meta": "<= 2% das horas úteis",
+        "periodicidade": "Trimestral"
+      }
+    ],
+    "referencias": [
+      "AAPM Task Group 142. Quality assurance of medical accelerators. Med Phys, 2009.",
+      "AAPM Task Group 198. Implementation of AAPM TG-142. Med Phys, 2021.",
+      "CNEN NN-3.01. Diretrizes básicas de proteção radiológica. Comissão Nacional de Energia Nuclear.",
+      "CNEN NN-6.10. Requisitos de segurança e proteção radiológica para serviços de radioterapia.",
+      "ANVISA. RDC no 611/2022. Requisitos sanitários para serviços de radiologia diagnóstica e radioterapia.",
+      "IEC 60601-2-1. Medical electrical equipment: particular requirements for electron accelerators.",
+      "IAEA TRS-398. Absorbed dose determination in external beam radiotherapy.",
+      "NR-10. Segurança em instalações e serviços em eletricidade. Ministério do Trabalho.",
+      "NR-32. Segurança e saúde no trabalho em serviços de saúde."
+    ],
+    "anexos": [
+      {
+        "titulo": "Checklist de Bloqueio e Reenergização (LOTO)",
+        "tipo": "checklist",
+        "descricao": "Ferramenta de beira-equipamento aplicada na entrada e na saída do bunker. Cada item exige visto do executante responsável.",
+        "conteudo": [
+          "Agenda clínica bloqueada e confirmada no sistema de gestão",
+          "Equipamento identificado por número de série e sala",
+          "Disjuntor geral bloqueado com cadeado individual de cada executante",
+          "Ausência de tensão confirmada por multimetro",
+          "Bunker varrido visualmente e sinalização de manutenção afixada",
+          "Dosímetro individual de leitura direta em uso por cada executante",
+          "Ferramentas conferidas contra a lista de saída",
+          "Cadeados removidos na ordem inversa pelos próprios executantes",
+          "Warm-up executado e constância dosimétrica reverificada",
+          "Liberação clínica assinada pelo Físico Médico Responsável Técnico"
+        ]
+      },
+      {
+        "titulo": "Tolerâncias de Aceite por Parâmetro (TG-142)",
+        "tipo": "tabela",
+        "descricao": "Limites objetivos que determinam aprovação ou reprovação do equipamento. Valor fora de tolerância impede a liberação para uso clínico.",
+        "colunas": [
+          "Parâmetro verificado",
+          "Tolerância",
+          "Ação se fora do limite"
+        ],
+        "linhas": [
+          [
+            "Constância dosimétrica de referência",
+            "+/- 2%",
+            "Reprovar liberação e acionar fabricante"
+          ],
+          [
+            "Coincidência campo luminoso x radiação",
+            "2 mm por borda",
+            "Ajustar e reverificar"
+          ],
+          [
+            "Isocentro radiológico",
+            "1 mm de raio",
+            "Reprovar e acionar engenharia"
+          ],
+          [
+            "Exatidão de posicionamento de mesa",
+            "2 mm",
+            "Recalibrar encoder"
+          ],
+          [
+            "Leitura do telemetro",
+            "2 mm",
+            "Ajustar projeção óptica"
+          ],
+          [
+            "Intertravamento de porta",
+            "Funcional (sim/não)",
+            "Reprovar imediatamente"
+          ]
+        ]
+      },
+      {
+        "titulo": "Fluxo de Decisão da Liberação para Uso Clínico",
+        "tipo": "fluxograma",
+        "descricao": "Caminho de decisão aplicado ao fim da manutenção. A liberação é ato privativo do Físico Médico Responsável Técnico.",
+        "conteudo": [
+          {
+            "id": "i",
+            "tipo": "inicio",
+            "texto": "Manutenção concluída",
+            "raia": "Engenharia Clínica"
+          },
+          {
+            "id": "t1",
+            "tipo": "tarefa",
+            "texto": "Remover LOTO e reenergizar",
+            "raia": "Engenharia Clínica",
+            "critico": true
+          },
+          {
+            "id": "t2",
+            "tipo": "tarefa",
+            "texto": "Testes dosimétricos e mecânicos",
+            "raia": "Física Médica"
+          },
+          {
+            "id": "d1",
+            "tipo": "decisao",
+            "texto": "Constância dentro de 2%?",
+            "raia": "Física Médica",
+            "sim": "t3",
+            "nao": "t4"
+          },
+          {
+            "id": "t3",
+            "tipo": "tarefa",
+            "texto": "Assinar a liberação clínica",
+            "raia": "Física Médica",
+            "critico": true
+          },
+          {
+            "id": "t5",
+            "tipo": "tarefa",
+            "texto": "Reabrir a agenda de pacientes",
+            "raia": "Técnicos em Radioterapia",
+            "proximo": "f1"
+          },
+          {
+            "id": "t4",
+            "tipo": "tarefa",
+            "texto": "Manter bloqueio e acionar fabricante",
+            "raia": "Engenharia Clínica",
+            "proximo": "f2"
+          },
+          {
+            "id": "f1",
+            "tipo": "fim",
+            "texto": "Equipamento liberado"
+          },
+          {
+            "id": "f2",
+            "tipo": "fim",
+            "texto": "Equipamento bloqueado"
+          }
+        ],
+        "raias": [
+          "Engenharia Clínica",
+          "Física Médica",
+          "Técnicos em Radioterapia"
+        ]
+      },
+      {
+        "titulo": "Glossário Visual de Símbolos",
+        "tipo": "glossario",
+        "descricao": "Convenções gráficas utilizadas neste procedimento.",
+        "conteudo": [
+          {
+            "colunas": [
+              "Símbolo",
+              "Significado"
+            ],
+            "linhas": [
+              [
+                "⚠  Passo Crítico",
+                "Etapa onde o erro causa dano grave ou exposição indevida."
+              ],
+              [
+                "Risco",
+                "Falha potencial mapeada com barreira correspondente."
+              ],
+              [
+                "Barreira",
+                "Controle que impede a materialização do risco."
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "historico_revisoes": [
+      {
+        "versao": "01",
+        "data": "08/2026",
+        "descricao": "Elaboração inicial",
+        "responsavel": "Física Médica"
+      }
+    ]
+  }
+}

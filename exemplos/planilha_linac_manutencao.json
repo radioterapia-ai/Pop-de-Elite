@@ -1,0 +1,403 @@
+{
+  "metadata_excel": {
+    "arquivo": "Gestao_Qualidade_Manutencao_Acelerador.xlsx",
+    "codigo": "PLAN-RTX-014",
+    "foco_auditoria": "Auditoria interna",
+    "setor": "Radioterapia — Física Médica e Engenharia Clínica"
+  },
+  "planilhas": [
+    {
+      "nome_aba": "Registro_Operacional",
+      "titulo": "Controle da Manutenção Preventiva Mensal — Registro de Execução",
+      "colunas": [
+        "Data/Hora",
+        "Acelerador (n.º de série / sala)",
+        "Executante",
+        "Constância dosimétrica (%)",
+        "Intertravamentos OK?",
+        "Intercorrência?",
+        "Visto do Físico Médico RT"
+      ],
+      "linhas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    {
+      "nome_aba": "Painel_Indicadores",
+      "titulo": "Dashboard de Monitoramento — POP-RTX-014",
+      "colunas": [
+        "ID",
+        "Indicador",
+        "Meta",
+        "Fórmula (Numerador / Denominador)",
+        "Frequência",
+        "Fonte de dados",
+        "Status atual"
+      ],
+      "linhas": [
+        [
+          "01",
+          "Taxa de cumprimento do cronograma de manutenção preventiva",
+          ">= 95%",
+          "Manutenções executadas no prazo / Manutenções programadas",
+          "Mensal",
+          "Sistema de gestão de ativos",
+          ""
+        ],
+        [
+          "02",
+          "Percentual de sessões com desvio dosimétrico dentro de 2%",
+          "100%",
+          "Sessões dentro da tolerância / Sessões de constância realizadas",
+          "Mensal",
+          "Planilha de constância da Física Médica",
+          ""
+        ],
+        [
+          "03",
+          "Tempo de indisponibilidade não programada do acelerador",
+          "<= 2% das horas úteis",
+          "Horas de parada não programada / Horas úteis do período",
+          "Trimestral",
+          "Ordem de serviço / BI Qualidade",
+          ""
+        ]
+      ]
+    },
+    {
+      "nome_aba": "Matriz_de_Risco",
+      "titulo": "Matriz de Riscos Radiológicos, Técnicos e Ocupacionais",
+      "colunas": [
+        "Processo / Etapa",
+        "Risco identificado",
+        "Severidade (1-5)",
+        "Probabilidade (1-5)",
+        "Score (S x P)",
+        "Barreira aplicada",
+        "Plano de contingência"
+      ],
+      "linhas": [
+        [
+          "Liberação para uso clínico",
+          "Liberação com desvio dosimétrico acima de 2%, expondo a coorte subsequente a dose incorreta",
+          "5",
+          "2",
+          "10",
+          "Critério de aceite objetivo com trava na planilha; assinatura privativa do Físico Médico RT",
+          "Reprovar liberação, manter agenda bloqueada, acionar fabricante, registrar não conformidade"
+        ],
+        [
+          "Intervenção sob LOTO",
+          "Energização inadvertida com executante dentro do bunker",
+          "5",
+          "1",
+          "5",
+          "Cadeado individual por executante e confirmação de tensão zero por multimetro",
+          "Manter LOTO aplicado, não religar manualmente, acionar Manutenção Predial"
+        ],
+        [
+          "Teste de segurança",
+          "Intertravamento de porta inoperante não detectado",
+          "5",
+          "2",
+          "10",
+          "Teste individual e documentado de cada intertravamento a cada manutenção",
+          "Interromper manutenção, sinalizar equipamento inoperante, comunicar Supervisor de Radioproteção"
+        ],
+        [
+          "Reenergização",
+          "Objeto ou ferramenta esquecido no bunker, colidindo com o gantry",
+          "3",
+          "3",
+          "9",
+          "Conferência da lista de saída de ferramentas por segundo executante",
+          "Interromper warm-up, reinspecionar bunker, reiniciar sequência de verificação"
+        ],
+        [
+          "Fechamento da OS",
+          "Perda de rastreabilidade por registro incompleto no dossiê",
+          "3",
+          "3",
+          "9",
+          "Formulário padronizado com campos obrigatórios e conferência no fechamento",
+          "Reabrir ordem de serviço e completar registro antes do arquivamento"
+        ]
+      ]
+    },
+    {
+      "nome_aba": "Auditoria_Rastreamento",
+      "titulo": "Checklist Reverso — Rastreamento do Equipamento (parte do dossiê e volta ao processo)",
+      "colunas": [
+        "Item verificável (passo crítico do POP)",
+        "Conforme (S/N/NA)",
+        "Evidência registrada",
+        "Entrevista com o profissional",
+        "Observações"
+      ],
+      "linhas": [
+        [
+          "O LOTO foi aplicado com cadeado individual de cada executante?",
+          "",
+          "Formulário de manutenção / foto do bloqueio",
+          "O executante soube descrever a ordem de remoção?",
+          ""
+        ],
+        [
+          "A ausência de tensão foi confirmada por multimetro antes da intervenção?",
+          "",
+          "Registro no formulário de manutenção",
+          "O executante sabe onde fica o disjuntor geral?",
+          ""
+        ],
+        [
+          "Cada intertravamento foi testado individualmente e documentado?",
+          "",
+          "Planilha de constância — bloco de segurança",
+          "O Físico Médico relata o critério de reprovação?",
+          ""
+        ],
+        [
+          "A liberação para uso clínico foi assinada pelo Físico Médico RT?",
+          "",
+          "Formulário de liberação com data e hora",
+          "A equipe técnica sabe que sem assinatura a agenda fica bloqueada?",
+          ""
+        ],
+        [
+          "A agenda so foi reaberta após comunicação formal da liberação?",
+          "",
+          "Log do sistema de gestão / comunicado",
+          "O técnico soube relatar quem autoriza a reabertura?",
+          ""
+        ]
+      ]
+    },
+    {
+      "nome_aba": "Cadeia_Cliente_Fornecedor",
+      "titulo": "Mapeamento Intersetorial e SLA de Entrega",
+      "colunas": [
+        "Setor fornecedor",
+        "Entrada (Input)",
+        "Este setor (Processamento)",
+        "Saída (Output)",
+        "Setor cliente",
+        "SLA exigido"
+      ],
+      "linhas": [
+        [
+          "Coordenação de Radioterapia",
+          "Janela de manutenção aprovada e agenda bloqueada",
+          "Física Médica e Engenharia Clínica",
+          "Equipamento verificado e liberado",
+          "Técnicos em Radioterapia",
+          "Bloqueio confirmado com 48 h de antecedência"
+        ],
+        [
+          "Almoxarifado de Física Médica",
+          "Camara de ionização calibrada e objeto simulador",
+          "Física Médica",
+          "Medidas de constância registradas",
+          "Dossiê do equipamento",
+          "Certificado de calibração vigente"
+        ],
+        [
+          "Manutenção Predial",
+          "Estabilidade de temperatura, umidade e no-break",
+          "Engenharia Clínica",
+          "Intervenção mecânica concluída",
+          "Física Médica",
+          "Condições mantidas durante toda a janela"
+        ],
+        [
+          "Supervisão de Radioproteção",
+          "Validação de intertravamentos e levantamento radiométrico",
+          "Física Médica",
+          "Parecer de radioproteção",
+          "Físico Médico RT",
+          "Parecer no mesmo dia da intervenção"
+        ],
+        [
+          "Física Médica",
+          "Liberação assinada para uso clínico",
+          "Coordenação de Radioterapia",
+          "Agenda reaberta",
+          "Pacientes em tratamento",
+          "Comunicação formal antes do primeiro campo"
+        ]
+      ]
+    },
+    {
+      "nome_aba": "Plano_de_Ação_PDCA",
+      "titulo": "Gestão de Não Conformidades — 5W2H",
+      "colunas": [
+        "What (O que)",
+        "Why (Por que)",
+        "Where (Onde)",
+        "When (Quando)",
+        "Who (Quem)",
+        "How (Como)",
+        "How Much (Custo/Impacto)",
+        "Status"
+      ],
+      "linhas": [
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      ]
+    }
+  ]
+}

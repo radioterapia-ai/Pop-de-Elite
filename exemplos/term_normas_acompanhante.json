@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "tipo_documento": "TERM",
+    "codigo": "TERM-INT-001",
+    "titulo": "Normas para acompanhantes na internação",
+    "setor": "Unidades de Internação",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "paciente",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Enfermagem Hospitalar", "cargo": "Enfermeiro(a)"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "campos", "itens": [
+      {"rotulo": "Nome do(a) acompanhante", "linhas": 1},
+      {"rotulo": "Documento de identificação", "linhas": 1},
+      {"rotulo": "Relação com o(a) paciente", "linhas": 1}
+    ]},
+    {"tipo": "paragrafo", "texto": "Declaro que recebi orientação sobre as normas para acompanhantes desta unidade e que estou ciente delas:"},
+    {"tipo": "lista", "itens": [
+      "Manter a identificação de acompanhante visível durante toda a permanência.",
+      "Higienizar as mãos ao entrar e ao sair do quarto e antes de tocar no(a) paciente.",
+      "Não oferecer alimentos, bebidas ou medicamentos ao(à) paciente sem liberação da equipe.",
+      "Comunicar imediatamente à equipe qualquer mudança no estado do(a) paciente, queda ou situação de risco.",
+      "Não manipular equipamentos, bombas de infusão, cateteres ou curativos.",
+      "Respeitar o silêncio, a privacidade dos demais pacientes e a proibição de fumar nas dependências.",
+      "Guardar pertences pessoais; a instituição não se responsabiliza por objetos de valor não entregues à guarda."
+    ]},
+    {"tipo": "paragrafo", "texto": "Fui informado(a) de que posso pedir esclarecimentos à equipe a qualquer momento e de que o descumprimento destas normas pode levar à revisão da permanência como acompanhante, sempre preservado o direito do(a) paciente a acompanhante previsto em lei."}
+  ],
+  "assinaturas": [
+    {"papel": "Acompanhante"},
+    {"papel": "Profissional que orientou", "detalhe": "Nome e registro profissional"}
+  ]
+}

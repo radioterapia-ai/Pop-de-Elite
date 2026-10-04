@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "tipo_documento": "COD",
+    "codigo": "COD-GOV-001",
+    "titulo": "Código de conduta profissional",
+    "setor": "Governança Corporativa",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "interno",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Governança e Compliance", "cargo": "Compliance"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "titulo", "texto": "Princípios"},
+    {"tipo": "paragrafo", "texto": "Agimos com respeito à pessoa atendida, ética profissional, transparência e responsabilidade sobre a segurança do cuidado. Este código vale para colaboradores, corpo clínico, prestadores e parceiros."},
+    {"tipo": "titulo", "texto": "Condutas esperadas"},
+    {"tipo": "lista", "itens": [
+      "Tratar pacientes, familiares e colegas com cortesia, sem discriminação de qualquer natureza.",
+      "Proteger a privacidade e o sigilo das informações de pacientes e da instituição.",
+      "Comunicar incidentes e riscos de segurança assim que forem percebidos.",
+      "Declarar conflitos de interesse antes de decisões de compra, contratação ou indicação."
+    ]},
+    {"tipo": "titulo", "texto": "Condutas vedadas"},
+    {"tipo": "lista", "itens": [
+      "Assédio moral ou sexual, intimidação e retaliação.",
+      "Aceitar presentes ou vantagens de fornecedores acima do valor simbólico definido pela instituição.",
+      "Divulgar imagens ou dados de pacientes em redes sociais ou aplicativos de mensagem.",
+      "Inserir dados de pacientes em ferramentas de inteligência artificial não autorizadas pela instituição."
+    ]},
+    {"tipo": "titulo", "texto": "Canal de conduta"},
+    {"tipo": "paragrafo", "texto": "Relatos podem ser feitos de forma identificada ou anônima pelo canal de conduta. É vedada qualquer retaliação a quem relata de boa-fé."},
+    {"tipo": "titulo", "texto": "Consequências"},
+    {"tipo": "paragrafo", "texto": "As apurações seguem a Cultura Justa: distinguem a falha do sistema, o erro humano, o comportamento de risco e a conduta imprudente, com medidas proporcionais a cada caso."}
+  ]
+}

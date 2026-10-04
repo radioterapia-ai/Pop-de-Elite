@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/radioterapia-ai/Pop-de-Elite/security/advisories/new
+    about: Anything that exposes what people typed or attached, or that injects content into a document. Do not open a public issue.
+  - name: Radioterapia.AI
+    url: https://radioterapia.ai
+    about: About the project and the rest of the ecosystem.

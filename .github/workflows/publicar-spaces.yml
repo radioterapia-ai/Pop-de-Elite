@@ -1,0 +1,89 @@
+# Tests the engine, its API, the 1.0 app and the backend, then publishes both Hugging Face Spaces
+# from this repository on every update of main:
+#   - the engine (Docker):        Radioterapia-AI/pop-de-elite-motor
+#   - POP de Elite 1.0 (Gradio):  Radioterapia-AI/POP
+# If any test fails, nothing is published.
+#
+# Settings → Secrets and variables → Actions:
+#   secret    HF_TOKEN          Hugging Face token with WRITE access to the organisation
+#   secret    POP_MOTOR_TOKEN   copied into the engine Space's secrets on each publish; without it,
+#                               the engine refuses every /renderizar
+#   variable  HF_SPACE_MOTOR    (optional) default Radioterapia-AI/pop-de-elite-motor
+#   variable  HF_SPACE_V1       (optional) default Radioterapia-AI/POP
+
+name: Test and publish Spaces
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: publicar-spaces-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fonts (Carlito has the metrics of Calibri)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-crosextra-carlito fonts-dejavu-core
+      - name: Dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Lint
+        run: ruff check .
+      - name: Interface texts complete in the 12 languages
+        run: node scripts/montar_i18n.mjs --verificar
+      - name: Model instructions in sync with prompts/
+        run: node scripts/montar_prompts.mjs --verificar
+      - name: Engine, API, 1.0 app and the knowledge-base slicer
+        env:
+          POP_SEM_IMAGENS: "1"
+        run: python -m pytest -q
+      - name: Backend (simulated Gemini, fictitious knowledge base)
+        run: node --test tests/backend.test.mjs
+
+  publish:
+    needs: tests
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      POP_MOTOR_TOKEN: ${{ secrets.POP_MOTOR_TOKEN }}
+      SPACE_MOTOR: ${{ vars.HF_SPACE_MOTOR || 'Radioterapia-AI/pop-de-elite-motor' }}
+      SPACE_V1: ${{ vars.HF_SPACE_V1 || 'Radioterapia-AI/POP' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Without HF_TOKEN, nothing is published
+        if: env.HF_TOKEN == ''
+        run: echo "::warning::HF_TOKEN secret missing — tests passed, nothing was published."
+      - name: Hugging Face client
+        if: env.HF_TOKEN != ''
+        run: pip install huggingface_hub
+      - name: Engine (Docker)
+        if: env.HF_TOKEN != ''
+        run: python scripts/montar_space.py --enviar "$SPACE_MOTOR"
+      - name: POP de Elite 1.0 (Gradio)
+        if: env.HF_TOKEN != ''
+        run: python scripts/montar_space_v1.py --enviar "$SPACE_V1"
+      - name: Engine answering
+        if: env.HF_TOKEN != ''
+        run: |
+          owner="${SPACE_MOTOR%%/*}"; name="${SPACE_MOTOR#*/}"
+          url="https://$(echo "$owner" | tr 'A-Z_' 'a-z-')-$(echo "$name" | tr 'A-Z_' 'a-z-').hf.space/saude"
+          for i in $(seq 1 40); do
+            if curl -fsS -m 10 "$url"; then echo; echo "Engine up: $url"; exit 0; fi
+            sleep 15
+          done
+          echo "::warning::The engine did not answer within 10 minutes ($url). See the Space logs."

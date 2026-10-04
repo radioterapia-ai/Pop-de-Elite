@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "tipo_documento": "CONS",
+    "codigo": "CONS-END-001",
+    "titulo": "Endoscopia digestiva alta com sedação",
+    "setor": "Endoscopia",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "paciente",
+    "classificacao": "publico",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Endoscopia Digestiva", "cargo": "Médico Endoscopista"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "campos", "itens": [
+      {"rotulo": "Nome do(a) paciente", "linhas": 1},
+      {"rotulo": "Responsável legal (quando aplicável)", "linhas": 1}
+    ]},
+    {"tipo": "paragrafo", "texto": "Fui informado(a) de que a endoscopia digestiva alta é um exame que permite ver o interior do esôfago, do estômago e da primeira parte do intestino (duodeno) com um tubo flexível com câmera, introduzido pela boca. O exame serve para investigar sintomas, confirmar diagnósticos, colher fragmentos de tecido para análise (biópsia) e, quando indicado, tratar algumas alterações no mesmo procedimento."},
+    {"tipo": "paragrafo", "texto": "Para o exame, recebo sedação por via venosa, aplicada e acompanhada pela equipe, com monitorização contínua da respiração, da oxigenação e dos batimentos cardíacos. Fui orientado(a) sobre o jejum conforme a orientação da equipe, sobre a necessidade de vir com acompanhante adulto e de não dirigir, operar máquinas ou tomar decisões importantes no restante do dia."},
+    {"tipo": "paragrafo", "texto": "O benefício esperado é o esclarecimento do diagnóstico e, quando possível, o tratamento no mesmo procedimento. Entendo que, como em todo procedimento, existem riscos:"},
+    {"tipo": "lista", "itens": [
+      "**Frequentes:** dor de garganta leve, sensação de estufamento pelo ar usado no exame e sonolência nas horas seguintes à sedação.",
+      "**Menos frequentes:** náusea, desconforto ou mancha roxa no local da punção venosa e reação leve aos medicamentos da sedação.",
+      "**Raros e graves:** sangramento, perfuração do tubo digestivo, aspiração de conteúdo do estômago para os pulmões, depressão respiratória pela sedação e reação alérgica grave, que podem exigir tratamento adicional, internação ou cirurgia."
+    ]},
+    {"tipo": "paragrafo", "texto": "Comprometo-me a informar à equipe os medicamentos que uso, alergias, doenças e qualquer sintoma após o exame, como dor abdominal intensa, febre, vômito com sangue ou fezes escuras. Fui informado(a) de que, diante de situação imprevista durante o procedimento, a equipe poderá adotar conduta adicional necessária à minha segurança, quando não for possível obter novo consentimento."},
+    {"tipo": "paragrafo", "texto": "Compreendo que a Medicina não é ciência exata e que a equipe assume obrigação de meio, empregando os recursos adequados, sem garantia de resultado. Foram discutidas comigo as alternativas disponíveis. Sei que posso recusar o exame ou revogar este consentimento a qualquer momento antes de sua realização, sem prejuízo do meu atendimento."},
+    {"tipo": "paragrafo", "texto": "Fui informado(a) de que ferramentas de inteligência artificial podem ser usadas como apoio à equipe, sempre sob supervisão, com a decisão final do profissional responsável, conforme a Resolução CFM nº 2.454/2026."},
+    {"tipo": "paragrafo", "texto": "Autorizo o registro das informações em prontuário e seu compartilhamento com a equipe assistencial e, na forma da lei, com a operadora do meu plano de saúde. Conheço meus direitos previstos na Lei Geral de Proteção de Dados (Lei nº 13.709/2018): acesso, correção, exclusão e portabilidade dos meus dados. O uso dos meus dados em pesquisa só ocorrerá de forma anonimizada e com minha autorização específica."},
+    {"tipo": "paragrafo", "texto": "Declaro que li este termo, ou que ele foi lido para mim, com tempo para refletir; que minhas dúvidas foram esclarecidas em linguagem que compreendi; e que consinto de livre e espontânea vontade com a realização do exame."}
+  ],
+  "assinaturas": [
+    {"papel": "Paciente ou responsável legal"},
+    {"papel": "Profissional responsável", "detalhe": "Nome, conselho e número"},
+    {"papel": "Testemunha (opcional, conforme a política da instituição)"}
+  ]
+}

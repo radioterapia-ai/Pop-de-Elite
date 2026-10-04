@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "tipo_documento": "CHK",
+    "codigo": "CHK-ENF-001",
+    "titulo": "Conferência diária do carro de emergência",
+    "setor": "Enfermagem",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "interno",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Enfermagem em Urgência", "cargo": "Enfermeiro(a)"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "paragrafo", "texto": "Conferir no início de cada plantão e após todo uso. Item crítico não conforme: registrar, comunicar a liderança imediatamente e não liberar o carro até a correção."},
+    {"tipo": "campos", "itens": [
+      {"rotulo": "Unidade", "linhas": 1},
+      {"rotulo": "Data e hora", "linhas": 1},
+      {"rotulo": "Número do lacre", "linhas": 1}
+    ]},
+    {"tipo": "titulo", "texto": "Itens de conferência"},
+    {"tipo": "caixas", "itens": [
+      "Lacre íntegro e número igual ao do último registro",
+      {"texto": "Desfibrilador ligado à rede, com teste de carga registrado", "critico": true},
+      {"texto": "Material de via aérea completo, com laringoscópio e lâminas testados", "critico": true},
+      "Medicamentos dentro da validade e na quantidade padronizada",
+      "Cilindro de oxigênio portátil com carga suficiente",
+      "Aspirador portátil testado",
+      "Prancha rígida e materiais de acesso venoso disponíveis"
+    ]},
+    {"tipo": "titulo", "texto": "Não conformidades e providências"},
+    {"tipo": "campos", "itens": [
+      {"rotulo": "Descrição", "linhas": 3},
+      {"rotulo": "Providência e responsável", "linhas": 2}
+    ]}
+  ],
+  "assinaturas": [
+    {"papel": "Responsável pela conferência", "detalhe": "Nome e registro profissional"}
+  ]
+}

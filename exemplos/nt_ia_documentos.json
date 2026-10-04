@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "tipo_documento": "NT",
+    "codigo": "NT-QUA-001",
+    "titulo": "Uso de inteligência artificial na elaboração de documentos institucionais",
+    "setor": "Qualidade e Segurança",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "interno",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Gestão da Qualidade", "cargo": "Escritório da Qualidade"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "titulo", "texto": "Contexto"},
+    {"tipo": "paragrafo", "texto": "Ferramentas de inteligência artificial generativa passaram a ser usadas para redigir rascunhos de procedimentos, políticas e treinamentos. Esta nota orienta o uso seguro dessas ferramentas na gestão documental."},
+    {"tipo": "titulo", "texto": "Análise técnica"},
+    {"tipo": "paragrafo", "texto": "O texto gerado pode conter informação incorreta apresentada com segurança, referência inexistente e conduta sem respaldo na instituição. Dados pessoais inseridos na ferramenta podem sair do ambiente controlado da instituição. A Resolução CFM nº 2.454/2026 mantém com o profissional a responsabilidade pela decisão, e a Lei nº 13.709/2018 (LGPD) exige base legal e salvaguardas para o tratamento de dados pessoais."},
+    {"tipo": "titulo", "texto": "Recomendação"},
+    {"tipo": "tabela", "colunas": ["Permitido", "Vedado"], "linhas": [
+      ["Gerar rascunho a partir do processo descrito pela equipe", "Publicar texto gerado sem revisão do responsável técnico"],
+      ["Padronizar formato, linguagem e estrutura", "Inserir nome, prontuário ou qualquer dado de paciente"],
+      ["Sugerir indicadores e riscos para análise da equipe", "Citar referência que não foi conferida na fonte original"]
+    ]},
+    {"tipo": "paragrafo", "texto": "Todo documento elaborado com apoio de IA segue o fluxo normal de revisão e aprovação, e a revisão fica registrada no histórico do documento."},
+    {"tipo": "titulo", "texto": "Referências"},
+    {"tipo": "lista", "itens": [
+      "Conselho Federal de Medicina. Resolução CFM nº 2.454/2026.",
+      "Brasil. Lei nº 13.709, de 14 de agosto de 2018 (Lei Geral de Proteção de Dados Pessoais)."
+    ]}
+  ]
+}

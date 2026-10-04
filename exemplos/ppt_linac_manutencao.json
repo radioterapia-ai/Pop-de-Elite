@@ -1,0 +1,520 @@
+{
+  "metadata_ppt": {
+    "apresentacao": "Treinamento_Manutenção_Preventiva_Acelerador_RTX.pptx",
+    "codigo": "PPT-RTX-014",
+    "estilo_visual": "cientifico"
+  },
+  "slides": [
+    {
+      "numero": 1,
+      "tipo": "capa",
+      "titulo": "Manutenção Preventiva Mensal do Acelerador Linear",
+      "subtitulo": "Treinamento Institucional de Governança e Segurança",
+      "palestrante": "Física Médica e Engenharia Clínica"
+    },
+    {
+      "numero": 2,
+      "tipo": "disclaimer_creditos",
+      "titulo": "Foco do Treinamento",
+      "declaracao": "Este treinamento apresenta o POP-RTX-014 e não substitui a leitura integral do documento, as normas da CNEN nem as recomendações do fabricante."
+    },
+    {
+      "numero": 3,
+      "tipo": "transicao_tema",
+      "numero_secao": 1,
+      "titulo_secao": "Por que a manutenção preventiva importa",
+      "subtitulo_secao": "Um feixe fora de tolerância atinge todos os pacientes tratados depois dele"
+    },
+    {
+      "numero": 4,
+      "tipo": "texto_simples",
+      "titulo": "Objetivo e escopo",
+      "bullets": [
+        "Garantir que o acelerador opere **dentro das tolerâncias** antes do uso clínico",
+        "Aplica-se a todos os aceleradores lineares do serviço",
+        "Envolve Física Médica, Engenharia Clínica e equipe técnica",
+        "Vale para manutenções **mensais** programadas"
+      ],
+      "referencia_rodape": "POP-RTX-014, seções 1 e 2"
+    },
+    {
+      "numero": 5,
+      "tipo": "estatisticas_duplas",
+      "titulo": "O que está em jogo",
+      "estat_esq": {
+        "numero": "100%",
+        "descricao": "dos testes mensais registrados antes da liberação"
+      },
+      "estat_dir": {
+        "numero": "0",
+        "descricao": "liberações clínicas sem assinatura do físico responsável"
+      },
+      "bullets": [
+        "Metas do indicador de conformidade do POP",
+        "Desvio gera notificação e análise de causa"
+      ]
+    },
+    {
+      "numero": 6,
+      "tipo": "imagem_web_direita",
+      "titulo": "O equipamento",
+      "imagem_query": "linear accelerator radiotherapy treatment room",
+      "bullets": [
+        "Feixes de fótons e elétrons de alta energia",
+        "Sistemas de intertravamento protegem pacientes e equipe",
+        "Qualquer intervenção exige registro"
+      ],
+      "legenda": "Acelerador linear em sala blindada"
+    },
+    {
+      "numero": 7,
+      "tipo": "tres_colunas",
+      "titulo": "Quem faz o quê",
+      "colunas": [
+        {
+          "titulo": "Física Médica",
+          "bullets": [
+            "Planeja e executa os testes dosimétricos",
+            "Libera o equipamento para uso clínico"
+          ]
+        },
+        {
+          "titulo": "Engenharia Clínica",
+          "bullets": [
+            "Executa a manutenção mecânica e elétrica",
+            "Aplica bloqueio e etiquetagem (LOTO)"
+          ]
+        },
+        {
+          "titulo": "Técnicos de Radioterapia",
+          "bullets": [
+            "Interrompem a agenda conforme o cronograma",
+            "Executam o teste de constância diário"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 8,
+      "tipo": "imagem_web_esquerda",
+      "titulo": "Sinalização de área",
+      "imagem_query": "radiation warning sign hospital",
+      "bullets": [
+        "Sala sinalizada durante toda a intervenção",
+        "Acesso restrito à equipe autorizada"
+      ],
+      "legenda": "Trifólio de radiação ionizante"
+    },
+    {
+      "numero": 9,
+      "tipo": "transicao_tema",
+      "numero_secao": 2,
+      "titulo_secao": "Preparação e segurança",
+      "subtitulo_secao": "Nada começa sem bloqueio de energia e checklist"
+    },
+    {
+      "numero": 10,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ ALERTA DE SEGURANÇA: Bloqueio de energia (LOTO)",
+      "bullet_points": [
+        "**NUNCA** abrir painéis com o equipamento energizado",
+        "Cadeado e etiqueta individuais de cada executante",
+        "Testar a **ausência de tensão** antes de tocar em qualquer componente"
+      ],
+      "referencia_rodape": "NR-10; manual do fabricante"
+    },
+    {
+      "numero": 11,
+      "tipo": "arvore_decisao_clinica",
+      "titulo": "Liberação para uso clínico",
+      "nodo_raiz": {
+        "pergunta": "Todos os testes dentro da tolerância?",
+        "ramo_sim": {
+          "acao": "Físico assina a liberação e registra no livro"
+        },
+        "ramo_nao": {
+          "acao": "Equipamento bloqueado e chamado aberto",
+          "destaque": "risk_red"
+        }
+      }
+    },
+    {
+      "numero": 12,
+      "tipo": "imagem_web_panoramica",
+      "titulo": "Trabalho em equipe",
+      "imagem_query": "biomedical engineer maintenance hospital equipment",
+      "bullets": [
+        "Comunicação clara entre Engenharia e Física Médica",
+        "Passagem de plantão documentada"
+      ]
+    },
+    {
+      "numero": 13,
+      "tipo": "texto_duas_colunas",
+      "titulo": "Antes e depois da intervenção",
+      "coluna_esq": {
+        "titulo": "Antes",
+        "bullets": [
+          "Agenda de pacientes reprogramada",
+          "Checklist de pré-manutenção",
+          "LOTO aplicado"
+        ]
+      },
+      "coluna_dir": {
+        "titulo": "Depois",
+        "bullets": [
+          "Testes dosimétricos completos",
+          "Registro e assinatura",
+          "Retorno à agenda"
+        ]
+      }
+    },
+    {
+      "numero": 14,
+      "tipo": "piramide_3d",
+      "titulo": "Hierarquia de controles de radioproteção",
+      "niveis": [
+        {
+          "titulo": "EPI",
+          "descricao": "Dosímetro individual"
+        },
+        {
+          "titulo": "Administrativo",
+          "descricao": "POP, treinamento e sinalização"
+        },
+        {
+          "titulo": "Engenharia",
+          "descricao": "Intertravamentos e blindagem"
+        },
+        {
+          "titulo": "Eliminação",
+          "descricao": "Feixe desligado durante a intervenção"
+        }
+      ]
+    },
+    {
+      "numero": 15,
+      "tipo": "imagem_web_direita",
+      "titulo": "Instrumentação dosimétrica",
+      "imagem_query": "ionization chamber dosimetry radiotherapy",
+      "bullets": [
+        "Câmara de ionização calibrada em laboratório credenciado",
+        "Correções de temperatura e pressão em toda medida"
+      ],
+      "legenda": "Câmara de ionização e eletrômetro"
+    },
+    {
+      "numero": 16,
+      "tipo": "transicao_tema",
+      "numero_secao": 3,
+      "titulo_secao": "Execução",
+      "subtitulo_secao": "Sequência fixa, sem atalhos"
+    },
+    {
+      "numero": 17,
+      "tipo": "jornada_caso_clinico",
+      "titulo": "Passo a passo da manutenção",
+      "eventos": [
+        {
+          "data": "Passo 1",
+          "titulo": "Preparação",
+          "descricao": "Agenda bloqueada e LOTO aplicado",
+          "subitens": [
+            "Checklist assinado"
+          ]
+        },
+        {
+          "data": "Passo 2",
+          "titulo": "Intervenção",
+          "descricao": "Inspeção mecânica e elétrica",
+          "subitens": [
+            "Peças trocadas registradas"
+          ]
+        },
+        {
+          "data": "Passo 3",
+          "titulo": "Testes",
+          "descricao": "Dosimetria e mecânica conforme TG-142",
+          "subitens": [
+            "Resultados na planilha"
+          ]
+        },
+        {
+          "data": "Passo 4",
+          "titulo": "Liberação",
+          "descricao": "Assinatura do físico responsável",
+          "subitens": [
+            "Comunicação à equipe"
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 18,
+      "tipo": "tabela_avancada",
+      "titulo": "Testes mensais e tolerâncias",
+      "colunas": [
+        "Teste",
+        "Tolerância",
+        "Responsável"
+      ],
+      "linhas": [
+        [
+          "Constância de dose (fótons)",
+          "± 2%",
+          "Física Médica"
+        ],
+        [
+          "Isocentro mecânico",
+          "± 1 mm",
+          "Física Médica"
+        ],
+        [
+          "Intertravamento da porta",
+          "Funcional",
+          "Engenharia Clínica"
+        ],
+        [
+          "Lasers de posicionamento",
+          "± 1 mm",
+          "Física Médica"
+        ]
+      ],
+      "comentario": "Valores de referência do AAPM TG-142; ajuste ao seu equipamento."
+    },
+    {
+      "numero": 19,
+      "tipo": "fluxograma",
+      "titulo": "Fluxo de liberação para uso clínico",
+      "processo": "Liberação do acelerador",
+      "raias": [
+        "Engenharia Clínica",
+        "Física Médica",
+        "Técnicos em Radioterapia"
+      ],
+      "etapas": [
+        {
+          "id": "i",
+          "tipo": "inicio",
+          "texto": "Manutenção concluída",
+          "raia": "Engenharia Clínica"
+        },
+        {
+          "id": "t1",
+          "tipo": "tarefa",
+          "texto": "Remover LOTO e reenergizar",
+          "raia": "Engenharia Clínica",
+          "critico": true
+        },
+        {
+          "id": "t2",
+          "tipo": "tarefa",
+          "texto": "Testes dosimétricos e mecânicos",
+          "raia": "Física Médica"
+        },
+        {
+          "id": "d1",
+          "tipo": "decisao",
+          "texto": "Constância dentro de 2%?",
+          "raia": "Física Médica",
+          "sim": "t3",
+          "nao": "t4"
+        },
+        {
+          "id": "t3",
+          "tipo": "tarefa",
+          "texto": "Assinar a liberação clínica",
+          "raia": "Física Médica",
+          "critico": true
+        },
+        {
+          "id": "t5",
+          "tipo": "tarefa",
+          "texto": "Reabrir a agenda de pacientes",
+          "raia": "Técnicos em Radioterapia",
+          "proximo": "f1"
+        },
+        {
+          "id": "t4",
+          "tipo": "tarefa",
+          "texto": "Manter bloqueio e acionar fabricante",
+          "raia": "Engenharia Clínica",
+          "proximo": "f2"
+        },
+        {
+          "id": "f1",
+          "tipo": "fim",
+          "texto": "Equipamento liberado"
+        },
+        {
+          "id": "f2",
+          "tipo": "fim",
+          "texto": "Equipamento bloqueado"
+        }
+      ]
+    },
+    {
+      "numero": 20,
+      "tipo": "quatro_colunas",
+      "titulo": "Pilares do processo",
+      "colunas": [
+        {
+          "titulo": "Segurança",
+          "icone": "shield",
+          "texto": "LOTO e intertravamentos sempre testados"
+        },
+        {
+          "titulo": "Precisão",
+          "icone": "diamond",
+          "texto": "Tolerâncias do TG-142"
+        },
+        {
+          "titulo": "Rastreabilidade",
+          "icone": "gear",
+          "texto": "Tudo registrado e assinado"
+        },
+        {
+          "titulo": "Melhoria",
+          "icone": "star",
+          "texto": "Indicadores revistos todo mês"
+        }
+      ]
+    },
+    {
+      "numero": 21,
+      "tipo": "funil_processos_3d",
+      "titulo": "Triagem de chamados de manutenção",
+      "etapas": [
+        {
+          "titulo": "Chamados abertos",
+          "valor": "42"
+        },
+        {
+          "titulo": "Resolvidos pela equipe local",
+          "valor": "31"
+        },
+        {
+          "titulo": "Escalados ao fabricante",
+          "valor": "9"
+        },
+        {
+          "titulo": "Com impacto na agenda",
+          "valor": "2"
+        }
+      ]
+    },
+    {
+      "numero": 22,
+      "tipo": "imagem_web_panoramica",
+      "titulo": "Sala de comando",
+      "imagem_query": "radiotherapy control room console",
+      "bullets": [
+        "Console liberado só depois da assinatura",
+        "Registro visível para toda a equipe"
+      ]
+    },
+    {
+      "numero": 23,
+      "tipo": "transicao_tema",
+      "numero_secao": 4,
+      "titulo_secao": "Registros e indicadores",
+      "subtitulo_secao": "O que não está registrado não aconteceu"
+    },
+    {
+      "numero": 24,
+      "tipo": "lista_dupla_circular",
+      "titulo": "Regras inegociáveis do bunker",
+      "itens": [
+        {
+          "titulo": "LOTO individual",
+          "texto": "Cada executante com seu cadeado"
+        },
+        {
+          "titulo": "Teste de porta",
+          "texto": "Antes do primeiro paciente do dia"
+        },
+        {
+          "titulo": "Liberação assinada",
+          "texto": "Só o físico responsável libera"
+        },
+        {
+          "titulo": "Registro imediato",
+          "texto": "Nada fica para depois"
+        }
+      ]
+    },
+    {
+      "numero": 25,
+      "tipo": "infografico_resumo",
+      "titulo": "Indicadores do processo",
+      "tema_central": "Conformidade",
+      "subtitulo_central": "meta: 100%",
+      "ideias": [
+        {
+          "titulo": "Cronograma cumprido",
+          "descricao": "Manutenções realizadas no mês previsto"
+        },
+        {
+          "titulo": "Testes registrados",
+          "descricao": "Resultados completos na planilha"
+        },
+        {
+          "titulo": "Liberações assinadas",
+          "descricao": "Nenhuma liberação sem assinatura"
+        }
+      ]
+    },
+    {
+      "numero": 26,
+      "tipo": "alerta_seguranca",
+      "titulo": "⚠ ALERTA DE SEGURANÇA: Retorno ao uso clínico",
+      "bullet_points": [
+        "**NUNCA** tratar paciente antes da liberação assinada",
+        "Teste fora da tolerância bloqueia o equipamento",
+        "Comunique a equipe por escrito ao liberar"
+      ],
+      "referencia_rodape": "CNEN NN 6.10"
+    },
+    {
+      "numero": 27,
+      "tipo": "texto_simples",
+      "titulo": "Registros obrigatórios",
+      "bullets": [
+        "Checklist de pré-manutenção assinado",
+        "Planilha de testes mensais preenchida",
+        "Livro de ocorrências do equipamento",
+        "Termo de liberação para uso clínico"
+      ]
+    },
+    {
+      "numero": 28,
+      "tipo": "take_home",
+      "titulo": "Mensagem Central",
+      "mensagens": [
+        "**Sem LOTO, sem manutenção**",
+        "**Sem assinatura, sem paciente**",
+        "Registro completo protege o paciente e a equipe"
+      ]
+    },
+    {
+      "numero": 29,
+      "tipo": "referencias",
+      "titulo": "Referências e Normativas",
+      "referencias_completas": [
+        "CNEN NN 6.10 — Requisitos de segurança e proteção radiológica para serviços de radioterapia",
+        "AAPM Task Group 142 — Quality assurance of medical accelerators (2009)",
+        "NR-10 — Segurança em instalações e serviços em eletricidade",
+        "POP-RTX-014 — Manutenção Preventiva Mensal do Acelerador Linear"
+      ]
+    },
+    {
+      "numero": 30,
+      "tipo": "agradecimento",
+      "titulo": "Treinamento Concluído",
+      "palestrante": "Comitê da Qualidade e Segurança",
+      "contatos": [
+        "Assine a lista de presença"
+      ]
+    }
+  ]
+}

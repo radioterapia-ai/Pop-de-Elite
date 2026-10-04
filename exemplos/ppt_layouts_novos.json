@@ -1,0 +1,129 @@
+{
+  "metadata_ppt": {
+    "apresentacao": "Teste_Layouts_Novos.pptx",
+    "codigo": "PPT-TESTE-001",
+    "estilo_visual": "cientifico"
+  },
+  "slides": [
+    {
+      "numero": 1,
+      "tipo": "capa",
+      "titulo": "Teste dos Quatro Layouts Novos",
+      "subtitulo": "Regressão do dispatcher do PPT",
+      "palestrante": "Física Médica"
+    },
+    {
+      "numero": 2,
+      "tipo": "arvore_decisao_clinica",
+      "titulo": "Liberação do Acelerador para Uso Clínico",
+      "nodo_raiz": {
+        "pergunta": "A constância dosimétrica ficou dentro de 2%?",
+        "ramo_sim": {
+          "acao": "Assinar a liberação clínica e reabrir a agenda de tratamento."
+        },
+        "ramo_nao": {
+          "acao": "Manter a agenda bloqueada, acionar o fabricante e registrar não conformidade.",
+          "destaque": "risk_red"
+        }
+      },
+      "referencia_rodape": "AAPM TG-142"
+    },
+    {
+      "numero": 3,
+      "tipo": "piramide_3d",
+      "titulo": "Hierarquia de Controles de Radioproteção",
+      "niveis": [
+        {
+          "titulo": "Eliminação",
+          "descricao": "Suprimir a fonte de exposição"
+        },
+        {
+          "titulo": "Engenharia",
+          "descricao": "Blindagem e intertravamentos"
+        },
+        {
+          "titulo": "Administrativo",
+          "descricao": "POP, rodízio e treinamento"
+        },
+        {
+          "titulo": "EPI",
+          "descricao": "Dosímetro e avental plumbífero"
+        }
+      ],
+      "referencia_rodape": "CNEN NN-3.01"
+    },
+    {
+      "numero": 4,
+      "tipo": "funil_processos_3d",
+      "titulo": "Triagem de Chamados de Manutenção",
+      "etapas": [
+        {
+          "titulo": "Chamados abertos no mês",
+          "valor": "142"
+        },
+        {
+          "titulo": "Triados pela Engenharia Clínica",
+          "valor": "118"
+        },
+        {
+          "titulo": "Com impacto dosimétrico",
+          "valor": "31"
+        },
+        {
+          "titulo": "Que bloquearam a agenda",
+          "valor": "7"
+        }
+      ],
+      "referencia_rodape": "BI Qualidade"
+    },
+    {
+      "numero": 5,
+      "tipo": "lista_dupla_circular",
+      "titulo": "Regras Inegociáveis do Bunker",
+      "itens": [
+        {
+          "titulo": "LOTO individual",
+          "texto": "Cada executante aplica o próprio cadeado."
+        },
+        {
+          "titulo": "Tensão zero",
+          "texto": "Confirmar com multimetro antes de tocar."
+        },
+        {
+          "titulo": "Bunker vazio",
+          "texto": "Varredura visual documentada na entrada."
+        },
+        {
+          "titulo": "Dosímetro ativo",
+          "texto": "Leitura direta em uso por todos."
+        },
+        {
+          "titulo": "Lista de ferramentas",
+          "texto": "Conferência na saída, sem exceção."
+        },
+        {
+          "titulo": "Liberação assinada",
+          "texto": "Ato privativo do Físico Médico RT."
+        }
+      ],
+      "referencia_rodape": "POP-RTX-014"
+    },
+    {
+      "numero": 6,
+      "tipo": "alerta_seguranca",
+      "titulo": "Alerta de Segurança: Intertravamento de Porta",
+      "bullet_points": [
+        "Nunca liberar o feixe com o intertravamento da porta em bypass",
+        "Teste funcional do intertravamento antes do primeiro paciente do dia",
+        "Falha no teste: equipamento bloqueado e registro no livro de ocorrências"
+      ],
+      "referencia_rodape": "CNEN NN 6.10"
+    },
+    {
+      "numero": 7,
+      "tipo": "agradecimento",
+      "titulo": "Fim do teste",
+      "palestrante": "Comitê da Qualidade"
+    }
+  ]
+}

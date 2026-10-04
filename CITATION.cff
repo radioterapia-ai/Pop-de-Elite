@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "POP de Elite: drafting institutional quality documents from a conversation"
+message: >-
+  If this software is useful in your work, a citation is appreciated.
+  It is asked for, not required by the licence.
+type: software
+authors:
+  - family-names: "Braga"
+    given-names: "Henrique Faria"
+    website: "https://radioterapia.ai"
+repository-code: "https://github.com/radioterapia-ai/Pop-de-Elite"
+url: "https://radioterapia.ai"
+abstract: >-
+  A web tool that drafts institutional quality documents for hospitals and
+  clinics: standard operating procedures, policies, protocols, checklists,
+  consent form templates and other supporting documents, with a management
+  sheet and a training deck where they apply. A conversation collects the
+  process, the roles and the risks; a document engine builds Word, Excel and
+  PowerPoint files, including BPMN-style flowcharts with swimlanes. The
+  language model is Google Gemini, a third-party service. Every output is a
+  draft for the institution's own review. Not a medical device, and not
+  validated for clinical use.
+keywords:
+  - quality management
+  - patient safety
+  - standard operating procedure
+  - hospital
+  - document generation
+  - radiation therapy
+license: Apache-2.0

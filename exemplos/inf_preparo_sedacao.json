@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "tipo_documento": "INF",
+    "codigo": "INF-END-001",
+    "titulo": "Preparo para exames com sedação",
+    "setor": "Endoscopia",
+    "idioma": "pt",
+    "versao": "01",
+    "publico": "paciente",
+    "data_elaboracao": "10/2026",
+    "elaborado_por": {"nome": "Especialista em Enfermagem em Endoscopia", "cargo": "Enfermeiro(a)"},
+    "revisado_por": {"nome": "", "cargo": ""},
+    "aprovado_por": {"nome": "", "cargo": ""}
+  },
+  "corpo": [
+    {"tipo": "titulo", "texto": "Por que o preparo importa"},
+    {"tipo": "paragrafo", "texto": "A sedação deixa você relaxado(a) e sonolento(a) durante o exame. Com o estômago vazio, o risco de o alimento voltar e chegar aos pulmões diminui muito. Por isso o jejum é parte da sua segurança."},
+    {"tipo": "titulo", "texto": "O que fazer"},
+    {"tipo": "lista", "itens": [
+      "Siga o tempo de jejum que a equipe indicar para alimentos e para líquidos.",
+      "Avise a equipe com antecedência se você usa medicamentos para diabetes, para afinar o sangue ou outros de uso contínuo: não suspenda nada por conta própria.",
+      "Venha com um acompanhante adulto, que deverá levar você para casa.",
+      "Depois do exame, não dirija, não opere máquinas e não tome decisões importantes até o dia seguinte."
+    ]},
+    {"tipo": "titulo", "texto": "Quando procurar a equipe"},
+    {"tipo": "paragrafo", "texto": "Procure atendimento se tiver dor abdominal forte, febre, vômito com sangue, fezes escuras ou falta de ar depois do exame."},
+    {"tipo": "campos", "itens": [{"rotulo": "Contato do setor", "linhas": 1}]}
+  ]
+}

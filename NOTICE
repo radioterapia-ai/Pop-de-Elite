@@ -1,0 +1,58 @@
+POP de Elite
+Copyright 2026 Henrique Braga
+
+This product includes software developed as part of the Radioterapia.AI
+ecosystem (https://radioterapia.ai).
+
+================================================================================
+ WHAT THIS PROJECT IS, AND WHAT IT IS NOT
+================================================================================
+
+POP de Elite is a drafting aid for institutional quality documents. It is not a
+medical device and it is not validated for clinical use. It does not diagnose,
+prescribe or decide clinical management.
+
+Every document it produces is a technical draft. The institution's own team
+must review, adapt and approve it before any use; signature fields are left
+blank on purpose. A consent form produced by it is always a template.
+
+It does not accept patient data. Do not type, record or attach names, medical
+record numbers, identified exams or photographs of patients.
+
+The language model is not ours: conversation and document content are produced
+by Google Gemini, called by the backend in this repository, which also holds the
+instructions given to the model. The knowledge base it consults on
+radioterapia.ai is not part of this repository; the tests use a short fictitious
+one.
+
+================================================================================
+ THIRD-PARTY COMPONENTS
+================================================================================
+
+Python libraries used by the document engine and its API (installed from PyPI,
+not bundled in this repository):
+
+  python-docx          MIT License             Steve Canny and contributors
+  python-pptx          MIT License             Steve Canny and contributors
+  openpyxl             MIT License             Eric Gazoni, Charlie Clark and contributors
+  Pillow               MIT-CMU License (HPND)  Jeffrey A. Clark and contributors
+  FastAPI              MIT License             Sebastián Ramírez
+  Uvicorn              BSD 3-Clause License    Encode OSS Ltd.
+  Gradio (1.0 app)     Apache License 2.0      Hugging Face, Inc.
+
+Fonts used to measure and draw text (installed by the operating system or the
+container image, not bundled):
+
+  Carlito              SIL Open Font License 1.1   Łukasz Dziedzic (tyPoland)
+  DejaVu Sans          Bitstream Vera License, with DejaVu changes in the public domain
+
+Services used when the project runs on radioterapia.ai (not bundled):
+
+  Google Gemini        language model and illustration model
+  Groq                 speech-to-text (Whisper), through the site's audio route
+  Hugging Face         hosting of the document engine and of the 1.0 app
+  Wikimedia Commons,   freely licensed photos for a training slide whose
+  Openverse              illustration failed (off with POP_SEM_IMAGENS=1)
+  Cloudflare           hosting of radioterapia.ai
+
+Details, versions and links: THIRD_PARTY.md.
